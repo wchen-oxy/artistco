@@ -1,0 +1,28 @@
+#contact-main-container{
+    display: flex;
+    height: 90vh;
+}
+
+#contact-image{
+    object-fit: cover;
+    height: 90%;
+}
+
+#contact-image-container{
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact-text-container{
+    margin:auto;
+}
+
+.contact-column-container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 100%;
+}

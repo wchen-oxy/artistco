@@ -1,0 +1,41 @@
+.philosophy-container {
+    display: flex;
+    height: 100vh;
+}
+
+#philosophy-text-container {
+    width: 40%;
+    margin: auto;
+}
+
+#philosophy-image-container {
+    width: 60%;
+    min-width: 600px;
+    height: 80vh;
+    padding-left: 15vh;
+    margin: auto;
+}
+
+.side-image{
+    position: absolute;
+    width: auto;
+    height: 25%;
+    right: 5%;
+    background-color: var(--gray);
+    transition: opacity 0.1s;
+}
+
+#side-image-1 {
+    top: 150%;
+}
+
+
+#side-image-2 {
+
+    top: 193.5%;
+}
+
+#side-image-3{
+    top: 237%;
+}
+

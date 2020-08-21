@@ -1,0 +1,34 @@
+.intro-main-container{
+    height: 100vh;
+    display: flex;
+    padding-bottom: 10vh;
+}
+
+.intro-main-columns{
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-image{
+    height: 100vh;   
+}
+
+#intro-main-desc { 
+    align-self: center;
+    width: 25%;
+}
+
+#intro-main-image-container {
+    width: 75%;
+    overflow: hidden;
+}
+
+.image-float-caption-container{
+    z-index: 1;
+    background-color: rgba(44, 44, 44, 0.822);
+    width:500px;
+    height: 200px;
+    position: absolute;
+    bottom: -30px;
+    
+}

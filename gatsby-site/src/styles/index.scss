@@ -1,0 +1,62 @@
+// Navbar
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    }
+
+nav {
+    width: 100%;
+    height: 5vh;
+    background-color: white;
+    position: fixed;
+    z-index: 99;
+    display: flex;   
+}
+
+.nav-item-container{
+    height:100%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+//Other
+.image-container{
+    z-index: 0;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.text-padding { 
+    padding: 1vh;
+}
+
+.image-caption-text{
+    color: white;
+    padding: 2vh;
+}
+
+.main-container{
+    // margin-top: 13vh;
+    margin-left: 13vh;
+    margin-right: 13vh;
+}
+
+.fit-image-to-container{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.centered-button{
+    margin:0 auto;
+    display: block;
+}
+

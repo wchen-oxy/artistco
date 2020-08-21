@@ -6,6 +6,7 @@
 .service-text-container{
     width: 35%;
     margin: auto;
+    padding: 1.5vh;
 }
 
 #service-title-container{
@@ -15,11 +16,10 @@
 
 #service-image-container{
     display: flex;
-    max-width:600px;
-    max-height:90vh;
     width: 100%;
     height: auto;
     margin: auto;
+    padding: 1.5vh;
 }
 
 

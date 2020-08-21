@@ -21,7 +21,9 @@ const ImageHolder = (props) => {
     const currentSlide = (n) => (
         setSlideIndex(n)
     );
-    const styles = { width: '100%',  objectFit: "cover"}
+    //ADD MAXHEIGHT MAXWIDTH PROP
+    console.log(props.dataArray);
+    const styles = { width: '100%',  objectFit: "cover", maxHeight: props.maxHeight, maxWidth : props.maxWidth}
     const imageUrl = props.dataArray[slideIndex].url;
     const caption = props.dataArray[slideIndex].caption;
     let dotArray = []
@@ -36,7 +38,7 @@ const ImageHolder = (props) => {
         <div id="image-component-container">
             <div className="slideshow-container">
                 <div className="mySlides fade">
-                    <div className="numbertext">1 / 3</div>
+                    {/* <div className="numbertext">1 / 3</div> */}
                     <img src={imageUrl} style={styles} />
                     <div className="text">{caption}</div>
                 </div>

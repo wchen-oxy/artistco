@@ -11,14 +11,20 @@ import '../styles/service.scss';
 const ServicePage = (props) => {
     console.log("Client");
     console.log(props.client);
+    const style= {maxHeight: props.maxHeight, maxWidth: props.maxWidth}
     const imageContainer = (
-        <div id="service-image-container">
+        <div id="service-image-container" style={style}>
             {/* {props.client === "Residential" ? "Residential" : "Business"} */}
-            {props.client === "Residential" ? <ImageHolder dataArray={props.dataArray} /> : 
-            (<img
-                alt="client image"
-                className="fit-image-to-container"
-                src="https://galio.lt/wp-content/uploads/2020/05/homepage-verslui.jpg" />)}
+            {props.client === "Residential" ?
+                <ImageHolder
+                    dataArray={props.dataArray}
+                    maxHeight={props.maxHeight}
+                    maxWidth={props.maxWidth}
+                /> :
+                (<img
+                    alt="client image"
+                    className="fit-image-to-container"
+                    src="https://galio.lt/wp-content/uploads/2020/05/homepage-verslui.jpg" />)}
         </div>
     );
 

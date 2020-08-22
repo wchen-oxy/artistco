@@ -25,14 +25,20 @@ const PhilosophyPage = (props) => {
 
     return (
         <div className="philosophy-container main-container">
-            <div className="container-padding" id="philosophy-text-container">
-                <h4>Our Philosophy</h4>
-                <p>
+            <div className="container-padding lax" id="philosophy-text-container"
+            
+            data-lax-preset="driftRight">
+              
+                <h2 id="philosophy-title-text">Our Philosophy</h2>
+                <p id="philosophy-description-text">
                     We work efficiently with our resources to ensure your project is
                     completed on time and on budget. We're licensed, insured and look forward
                     to building strong, long-lasting relationships with our clients and guarantee
                     your satisfaction.
-        </p>
+                </p>
+                  <div className="background-div">
+
+                </div>
             </div>
 
             <div className="container-padding container-padding-right" id="philosophy-image-container">
@@ -43,13 +49,13 @@ const PhilosophyPage = (props) => {
                     src={philosophyHeroImage}
                     data-lax-translate-y="300 50, 930 0"
                     data-lax-opacity="300 0, 700 1"
-                    
+
                 />
                 <img
                     className="side-image lax"
                     // data-lax-preset="fadeIn"
-                    data-lax-opacity="300 0, 700 1"
-                    data-lax-translate-y="300 0, 1000 -150"
+                    data-lax-opacity="150 0, 600 1"
+                    data-lax-translate-y="0 -300, 700 -200"
                     // data-lax-opacity="0 1, vh 0"
                     ref={firstImage}
                     id="side-image-1"
@@ -57,17 +63,17 @@ const PhilosophyPage = (props) => {
                 <img
                     className="side-image lax"
                     // data-lax-preset="fadeIn"
-                    data-lax-opacity="700 0, 900 1"
-                    data-lax-translate-y="700 50, 1000 -150"
+                    data-lax-opacity="650 0, 850 1"
+                    data-lax-translate-y="500 -300, 1000 -200"
                     // data-lax-opacity="0 1, vh 0"
-                    id="side-image-2" 
+                    id="side-image-2"
                     src={sideImage5}
-                    />
+                />
                 <img
                     className="side-image lax"
                     // data-lax-preset="fadeIn"
-                    data-lax-opacity="1000 0, 1300 1"
-                    data-lax-translate-y="1000 0, 1400 -150"
+                    data-lax-opacity="1150 0, 1300 1"
+                    data-lax-translate-y="1000 -250, 1500 -150"
                     // data-lax-opacity="0 1, vh 0"
                     id="side-image-3"
                     src={sideImage2} />

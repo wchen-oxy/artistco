@@ -1,3 +1,7 @@
+#main-subtitle{
+    font-size: 14px;
+}
+
 .intro-main-container{
     height: 100vh;
     display: flex;
@@ -11,6 +15,8 @@
 
 .intro-image{
     height: 100vh;   
+    // animation: 1s ease-out 0s 1 slideInFromBottom;
+
 }
 
 #intro-main-desc { 
@@ -25,10 +31,39 @@
 
 .image-float-caption-container{
     z-index: 1;
-    background-color: rgba(44, 44, 44, 0.822);
-    width:500px;
-    height: 200px;
+    background-color: rgba(44, 44, 44, 0.922);
+    width: 320px;
+    height: 180px;
     position: absolute;
-    bottom: -30px;
-    
+    bottom: -30px;   
+    padding: 5vh;
 }
+
+h4.image-caption-text{
+    font-weight: 300;
+}
+
+p.image-caption-text{
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.image-caption-text{
+    color: white;
+    font-weight: 200;
+    padding: 1vh;
+}
+
+.image-container{
+    z-index: 0;
+}
+
+//animation
+// @keyframes slideInFromBottom {
+//     0% {
+//       transform: translateY(100%);
+//     }
+//     100% {
+//       transform: translateY(0);
+//     }
+//   }

@@ -13,13 +13,20 @@
     text-align: center;
 }
 
-
+#service-description-text{
+    padding:2vh 2vh;
+}
 #service-image-container{
     display: flex;
     width: 100%;
     height: auto;
     margin: auto;
     padding: 1.5vh;
+}
+
+#temp-business-image-container{
+    width: 100%;
+    height: auto;
 }
 
 

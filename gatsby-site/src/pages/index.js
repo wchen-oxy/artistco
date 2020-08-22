@@ -19,6 +19,9 @@ import bathroom14after from "../../static/residential-gallery/bathroom/bath14aft
 import bedroom1 from "../../static/residential-gallery/bedroom/bedroom1.jpg";
 import bedroom2 from "../../static/residential-gallery/bedroom/bedroom2.jpg";
 import bedroom3 from "../../static/residential-gallery/bedroom/bedroom3.jpg";
+import bedroom4 from "../../static/residential-gallery/bedroom/bedroom4.jpg";
+import bedroom5 from "../../static/residential-gallery/bedroom/bedroom5.jpg";
+import bedroom6 from "../../static/residential-gallery/bedroom/bedroom6.jpg";
 
 import bathroom1 from "../../static/residential-gallery/bathroom/bathroom8.jpg";
 import bathroom2 from "../../static/residential-gallery/bathroom/bathroomwall.jpg";
@@ -26,22 +29,29 @@ import bathroom2 from "../../static/residential-gallery/bathroom/bathroomwall.jp
 import kitchen1before from "../../static/residential-gallery/kitchen1.1.1Before.jpg"
 import kitchen1after from "../../static/residential-gallery/kitchen1.1.1.jpg";
 
+import interiorwindowbefore from "../../static/residential-gallery/interiorWindowBefore.jpg";
+import interiorWindowafter from "../../static/residential-gallery/interiorWindowAfter.jpg";
 
+import kitchenblack2tiny from "../../static/residential-gallery/kitchen-black/2-tiny.jpg";
+import kitchenblack1 from "../../static/residential-gallery/kitchen-black/1.jpg";
+import kitchenblack2 from "../../static/residential-gallery/kitchen-black/2.jpg";
+import kitchenblack3 from "../../static/residential-gallery/kitchen-black/3.jpg";
+import kitchenblack4 from "../../static/residential-gallery/kitchen-black/4.jpg";
 
 import "../styles/index.scss";
 
 const heroResidentialImages =
   [
     {
-      caption: "Check out Our kitchen ay",
+      caption: "Check out Our kitchen lmao",
       url: kitchen
     },
     {
-      caption: "",
+      caption: "This some nice paint",
       url: bathroom
     },
     {
-      caption: "",
+      caption: "whoa this a nice room",
       url: wall
     }
   ];
@@ -100,15 +110,15 @@ const galleryResidentalImages = [
   },
   {
     caption: "Interior Window",
-    thumbnail: kitchen1after,
+    thumbnail: interiorWindowafter,
     data: [
       {
         caption: "before",
-        url: kitchen1before
+        url: interiorwindowbefore
       },
       {
         caption: "after",
-        url: kitchen1after
+        url: interiorWindowafter
       },
     ]
   },
@@ -116,6 +126,10 @@ const galleryResidentalImages = [
     caption: "Bedroom Set",
     thumbnail: bedroom1,
     data: [
+      {
+        caption: "",
+        url: kitchenblack1
+      },
       {
         caption: "",
         url: bedroom1
@@ -127,6 +141,18 @@ const galleryResidentalImages = [
       {
         caption: "",
         url: bedroom3
+      },
+      {
+        caption: "",
+        url: bedroom4
+      },
+      {
+        caption: "",
+        url: bedroom5
+      },
+      {
+        caption: "",
+        url: bedroom6
       }
     ]
   },
@@ -144,13 +170,32 @@ const galleryResidentalImages = [
       },
     ]
   },
+  {
+    caption: "Modern Kitchen",
+    thumbnail: kitchenblack2tiny,
+    data: [
+      {
+        caption: "",
+        url: kitchenblack2
+      },
+      {
+        caption: "",
+        url: kitchenblack3
+      },
+      {
+        caption: "",
+        url: kitchenblack4
+      },
+    ]
+
+  }
+
 ];
 
 const serviceImageMaxHeight = "450px";
 const serviceImageMaxWidth = "700px";
 const galleryImageMaxHeight = "600px";
 const galleryImageMaxWidth = "800px";
-
 
 
 export default function Home() {
@@ -171,27 +216,26 @@ export default function Home() {
   }, []);
 
   const scrollTo = (reference) => reference.current.scrollIntoView({ behavior: 'smooth' });
-  console.log(homeRef);
   return (
     <body>
       <header>
         <nav id="navigation-bar">
-          <div className="nav-item-container">
+          {/* <div className="nav-item-container"> */}
             {/* <a href="#">Home</a> */}
             <button onClick={() => scrollTo(homeRef)}>Home</button>
-          </div>
-          <div className="nav-item-container">
+          {/* </div> */}
+          {/* <div className="nav-item-container"> */}
             {/* <a href="#">Residential Service</a> */}
             <button onClick={() => scrollTo(residentialRef)}>Residential Services</button>
-          </div>
-          <div className="nav-item-container">
+          {/* </div> */}
+          {/* <div className="nav-item-container"> */}
             {/* <a href="#">Business and Government Service</a> */}
             <button onClick={() => scrollTo(businessRef)}>Business Services</button>
-          </div>
-          <div className="nav-item-container">
+          {/* </div> */}
+          {/* <div className="nav-item-container"> */}
             {/* <a href="#">Contact Us</a> */}
             <button onClick={() => scrollTo(contactRef)}>Contact Us</button>
-          </div>
+          {/* </div> */}
           {/* <ul><a href="#">HOME</a></ul>
           <ul><a href="#">SERVICES</a></ul>
           <ul><a href="#">CONTACT US</a></ul> */}

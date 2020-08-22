@@ -1,11 +1,25 @@
 .philosophy-container {
     display: flex;
     height: 100vh;
+    padding-bottom: 15vh;
 }
 
 #philosophy-text-container {
-    width: 40%;
+  
     margin: auto;
+}
+
+.background-div{
+    top: -9vh;
+    left:-4vh;
+    position: absolute;
+    width: 180%;
+    height: 200%;
+    max-height: 500px;
+    min-width: 250px;
+    background-color: rgba(163, 163, 163, 0.267);
+    z-index: 0;
+
 }
 
 #philosophy-image-container {
@@ -15,6 +29,11 @@
     padding-left: 15vh;
     margin: auto;
 }
+
+#philosophy-title-text{
+    padding-bottom:2vh;
+}
+
 
 .side-image{
     position: absolute;

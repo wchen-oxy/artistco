@@ -11,8 +11,8 @@ const ImageHolder = (props) => {
     // // Next/previous controls
     const moveSlides = (n) => {
         let index = slideIndex += n;
-        if (index > props.dataArray.length - 1) { index = 0 };
-        if (index < 0) { index = props.dataArray.length - 1 };
+        if (index > dataArray.length - 1) { index = 0 };
+        if (index < 0) { index = dataArray.length - 1 };
         setSlideIndex(index);
         //   showSlides(slideIndex += n)
 
@@ -21,15 +21,27 @@ const ImageHolder = (props) => {
     const currentSlide = (n) => (
         setSlideIndex(n)
     );
-    //ADD MAXHEIGHT MAXWIDTH PROP
-    console.log(props.dataArray);
+    const residentialImages = {
+        "bathroom": [
+          {
+            "image1": {
+              caption: "before",
+              url: "https://assets1.ignimgs.com/2020/08/19/racing-wheels-1597804923658.jpg?dpr=2&width=300&crop=16%3A9"
+            },
+            "image2": {
+              caption: "after",
+              url: "https://www.mastercook.com/app/Image/9211810/2887073.jpg"
+            }
+          }],
+      };
+    let dataArray = props.dataArray ? props.dataArray : residentialImages;
     const styles = { width: '100%',  objectFit: "cover", maxHeight: props.maxHeight, maxWidth : props.maxWidth}
-    const imageUrl = props.dataArray[slideIndex].url;
-    const caption = props.dataArray[slideIndex].caption;
+    const imageUrl = dataArray[slideIndex].url;
+    const caption = dataArray[slideIndex].caption;
     let dotArray = []
-    for (let i = 0; i < props.dataArray.length; i++){
+    for (let i = 0; i < dataArray.length; i++){
         dotArray.push(
-            <div style={{ textAlign: "center" }}>
+            <div>
                 <span className="dot" onClick={() => currentSlide(i)}></span>
             </div>
         )
@@ -40,7 +52,7 @@ const ImageHolder = (props) => {
                 <div className="mySlides fade">
                     {/* <div className="numbertext">1 / 3</div> */}
                     <img src={imageUrl} style={styles} />
-                    <div className="text">{caption}</div>
+                    <div className="text"><p>{caption}</p></div>
                 </div>
                 <a className="prev" onClick={() => moveSlides(-1)}>&#10094;</a>
                 <a className="next" onClick={() => moveSlides(1)}>&#10095;</a>

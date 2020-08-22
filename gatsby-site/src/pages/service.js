@@ -9,9 +9,7 @@ import '../styles/service.scss';
 //         src={props.client === "Residential" ? residential : "https://galio.lt/wp-content/uploads/2020/05/homepage-verslui.jpg"} />);
 
 const ServicePage = (props) => {
-    console.log("Client");
-    console.log(props.client);
-    const style= {maxHeight: props.maxHeight, maxWidth: props.maxWidth}
+    const style = { maxHeight: props.maxHeight, maxWidth: props.maxWidth }
     const imageContainer = (
         <div id="service-image-container" style={style}>
             {/* {props.client === "Residential" ? "Residential" : "Business"} */}
@@ -21,10 +19,16 @@ const ServicePage = (props) => {
                     maxHeight={props.maxHeight}
                     maxWidth={props.maxWidth}
                 /> :
-                (<img
-                    alt="client image"
-                    className="fit-image-to-container"
-                    src="https://galio.lt/wp-content/uploads/2020/05/homepage-verslui.jpg" />)}
+                (
+                    <div id="temp-business-image-container">
+                        <img
+                            id="business-image"
+                            alt="client image"
+                            className="fit-image-to-container"
+                            src="https://galio.lt/wp-content/uploads/2020/05/homepage-verslui.jpg" />
+                    </div>
+                )}
+
         </div>
     );
 
@@ -33,14 +37,14 @@ const ServicePage = (props) => {
             <div id="service-title-container">
                 <h2 className="title">{props.client}</h2>
             </div>
-            <div className="service-description-container">
-                <p>
+           
+                <p id="service-description-text">
                     Choose a space as uplifting as your new life chapter.
                     A place to clear your mind, to connect, to engage.
                     A place not just to live, but to live well.
                 </p>
-            </div>
-            <button className="centered-button">See our work so far!</button>
+            
+            {/* <button className="centered-button">See our work so far!</button> */}
         </div>
     );
 

@@ -36,8 +36,8 @@ const ImageHolder = (props) => {
       };
     let dataArray = props.dataArray ? props.dataArray : residentialImages;
     const styles = { width: '100%',  objectFit: "cover", maxHeight: props.maxHeight, maxWidth : props.maxWidth}
-    const imageUrl = dataArray[slideIndex].url;
-    const caption = dataArray[slideIndex].caption;
+    const imageUrl = props.dataArray ? dataArray[slideIndex].url : "";
+    const caption = props.dataArray ? dataArray[slideIndex].caption : "";
     let dotArray = []
     for (let i = 0; i < dataArray.length; i++){
         dotArray.push(

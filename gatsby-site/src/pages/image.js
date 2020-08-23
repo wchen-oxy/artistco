@@ -37,7 +37,7 @@ const ImageHolder = (props) => {
     let dataArray = props.dataArray ? props.dataArray : residentialImages;
     const styles = { width: '100%',  objectFit: "cover", maxHeight: props.maxHeight, maxWidth : props.maxWidth}
     console.log(dataArray);
-    const imageUrl = props.dataArray[slideIndex] ? dataArray[slideIndex].url : "https://www.mastercook.com/app/Image/9211810/2887073.jpg";
+    const imageUrl = props.dataArray ? dataArray[slideIndex].url : "https://www.mastercook.com/app/Image/9211810/2887073.jpg";
     const caption = props.dataArray ? dataArray[slideIndex].caption : "";
     let dotArray = []
     for (let i = 0; i < dataArray.length; i++){

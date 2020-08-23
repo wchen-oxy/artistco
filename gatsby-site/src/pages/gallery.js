@@ -19,7 +19,7 @@ const GalleryPage = (props) => {
         document.body.style.overflow = "visible";
     }
 
-    const modal = (
+    const modal = props.dataArray ? (
         <div className="modal" ref={modalRef}>
             <div className="overlay"></div>
             <span className="close" onClick={closeModal}>X</span>
@@ -32,7 +32,7 @@ const GalleryPage = (props) => {
                 {currentData}
             </div>
         </div>
-    );
+    ) : <></> ;
 
     const open = (i) => {
         setCurrentData(i);

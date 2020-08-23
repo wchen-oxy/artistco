@@ -9,9 +9,10 @@ const ContactPage = (props) => (
             <div id="contact-text-container">
             <h2>Contact Us</h2>
             <h3>Christian Flores-Moya</h3>
+            <p>Se Habla Español</p>
             <p>(347) 500-4903</p>
-            <p>Call and Text ok!</p>
-            <p>christian@essential-works.com</p>
+            <p>Call and Text Ok!</p>
+            <p>info@essential-works.com</p>
             <h3>Hours of Operation</h3>
             <p>9 am to 5pm, Monday to Friday</p>
             <p>(excluding federal holidays)</p>

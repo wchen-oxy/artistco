@@ -269,6 +269,11 @@ export default function Home() {
         maxWidth={serviceImageMaxWidth}
       />
       <ContactPage reference={contactRef} />
+      <div className="main-container" id="footer-container">
+      <footer><p>Essential-Works LLC &copy;</p></footer>
+
+      </div>
     </body>
+    
   )
 }

@@ -9,5 +9,5 @@ module.exports = {
   plugins: [
     'gatsby-plugin-sass',
   ],
-  pathPrefix: `/artistco/gatsby-site`,
+  // pathPrefix: `/artistco/gatsby-site`,
 }

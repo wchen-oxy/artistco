@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, {useState, useEffect} from 'react';
 
 import '../styles/image.scss';
 
@@ -7,6 +7,10 @@ const ImageHolder = (props) => {
     // let slidesContainerRef = useRef(null);
     // let dotContainerRef = useRef(null);
     let [slideIndex, setSlideIndex] = useState(0);
+    useEffect(() => {
+        console.log("Image mounted");
+        console.log(props.dataArray);
+    });
 
     // // Next/previous controls
     const moveSlides = (n) => {
@@ -15,7 +19,6 @@ const ImageHolder = (props) => {
         if (index < 0) { index = dataArray.length - 1 };
         setSlideIndex(index);
         //   showSlides(slideIndex += n)
-
     };
 
     const currentSlide = (n) => (

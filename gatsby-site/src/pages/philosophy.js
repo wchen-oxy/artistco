@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import '../styles/philosophy.scss';
 import sideImage1 from "../../static/altered/side-image-1.jpg";
@@ -18,17 +18,16 @@ const stockPhotoWorkUrl = "https://s3.amazonaws.com/craftsman-brand-staging/comf
 
 const PhilosophyPage = (props) => {
     const firstImage = useRef(null);
-
-    // window.addEventListener('scroll', function () {
-    //     console.log(window.pageYOffset + 'px');
-    // });
+    useEffect(() =>
+        window.addEventListener('scroll', function () {
+            console.log(window.pageYOffset + 'px');
+        })
+    );
 
     return (
         <div className="philosophy-container main-container">
             <div className="container-padding lax" id="philosophy-text-container"
-            
-            data-lax-preset="driftRight">
-              
+                data-lax-preset="driftRight">
                 <h2 id="philosophy-title-text">Our Philosophy</h2>
                 <p id="philosophy-description-text">
                     We work efficiently with our resources to ensure your project is
@@ -36,13 +35,10 @@ const PhilosophyPage = (props) => {
                     to building strong, long-lasting relationships with our clients and guarantee
                     your satisfaction.
                 </p>
-                  <div className="background-div">
-
+                <div className="background-div">
                 </div>
             </div>
-
             <div className="container-padding container-padding-right" id="philosophy-image-container">
-
                 <img
                     alt="hard work image"
                     className="lax fit-image-to-container"

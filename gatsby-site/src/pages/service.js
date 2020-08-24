@@ -1,17 +1,17 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import ImageHolder from "./image";
 import '../styles/service.scss';
 
-// const businessImage = (
-//     <img
-//         alt="client image"
-//         className="fit-image-to-container"
-//         src={props.client === "Residential" ? residential : "https://galio.lt/wp-content/uploads/2020/05/homepage-verslui.jpg"} />);
-
 const ServicePage = (props) => {
-    const style = { maxHeight: props.maxHeight, maxWidth: props.maxWidth }
+    const [isClient, setClient] = useState(false);
+
+    useEffect(() => setClient(true), []);
+    const imageMaxHeight = isClient ? props.dataArray.maxHeight : "400px";
+    const imageMaxWidth = isClient ? props.dataArray.maxWidth : "400px";
+
     const imageContainer = (
-        <div id="service-image-container" style={style}>
+         isClient ? 
+            <div id="service-image-container" style={{maxHeight: imageMaxHeight, maxWidth: imageMaxWidth}}>
             {/* {props.client === "Residential" ? "Residential" : "Business"} */}
             {props.client === "Residential" ?
                 <ImageHolder
@@ -30,6 +30,14 @@ const ServicePage = (props) => {
                 )}
 
         </div>
+        :
+
+        <div id="service-image-container" style={{maxHeight: imageMaxHeight, maxWidth: imageMaxWidth}}>
+            <p> Something went wrong.</p>
+            </div>
+
+        
+    
     );
 
     const descriptionContainer = (

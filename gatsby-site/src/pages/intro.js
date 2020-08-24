@@ -30,8 +30,8 @@ const IntroPage = (props) => (
             </div>
             <div className="image-container">
                 <img 
+                    alt="nice building image"
                     className="intro-image lax" 
-                    
                     src="https://www.rsd-agencements.com/Images/Accueil/RSD-Agencements-Architecte-interieur-Lyon-5.jpg" />
             </div>
 

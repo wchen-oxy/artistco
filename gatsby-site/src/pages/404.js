@@ -6,3 +6,5 @@ const errorPage = () => (
         <p>You mad lad, this isn't a page</p>
     </div>
 );
+
+export default errorPage;

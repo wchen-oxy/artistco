@@ -88,7 +88,7 @@ const GalleryPage = (props) => {
         }
 
     return (
-        <div style={{ paddingTop: "15vh" }}>
+        <div style={{ paddingTop: "15vh" }} key={isClient}>
             <h2 id="gallery-title-text">Our Residential Work</h2>
             {isClient ?
                 (

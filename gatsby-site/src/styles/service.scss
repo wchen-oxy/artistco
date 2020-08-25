@@ -1,32 +1,24 @@
-.services-main-container{
+#services-main-container{
     display:flex;
     height: 100vh;
 }
 
-.service-text-container{
-    width: 35%;
+#service-text-container{
+    width: 40%;
     margin: auto;
-    padding: 1.5vh;
+    padding: 5vh;
 }
 
 #service-title-container{
     text-align: center;
+    padding-bottom: 2vh;
 }
 
-#service-description-text{
-    padding:2vh 2vh;
-}
+
 #service-image-container{
-    display: flex;
-    width: 100%;
-    height: auto;
+    height: 60vh;
+    width: 50vw;
     margin: auto;
-    padding: 1.5vh;
-}
-
-#temp-business-image-container{
-    width: 100%;
-    height: auto;
 }
 
 

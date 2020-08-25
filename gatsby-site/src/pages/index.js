@@ -212,24 +212,19 @@ export default function Home() {
         client="Residential"
         orientation="image-left"
         dataArray={heroResidentialImages}
-        maxHeight={serviceImageMaxHeight}
-        maxWidth={serviceImageMaxWidth}
       />
       <GalleryPage
         dataArray={galleryResidentalImages}
-        maxHeight={galleryImageMaxHeight}
-        maxWidth={galleryImageMaxWidth} />
+        />
       <ServicePage
         reference={businessRef}
         client="Business"
         orientation="image-right"
         dataArray={heroResidentialImages}
-        maxHeight={serviceImageMaxHeight}
-        maxWidth={serviceImageMaxWidth}
       />
       <ContactPage reference={contactRef} />
       <div className="main-container" id="footer-container">
-        <footer><p>Essential-Works LLC &copy;</p></footer>
+        <footer><p>Essential Works LLC &copy;</p></footer>
       </div>
     </>
   )

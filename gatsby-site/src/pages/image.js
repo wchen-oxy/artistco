@@ -6,9 +6,6 @@ const ImageHolder = (props) => {
     const [isClient, setClient] = useState(false);
     const imageSource = isClient ? props.dataArray[slideIndex].url : "";
     const imageCaption = isClient ? props.dataArray[slideIndex].caption : "";
-    const imageMaxHeight = isClient ? props.maxHeight : "400px";
-    const imageMaxWidth = isClient ? props.maxWidth : "400px";
-    const styles = { width: '100%', objectFit: "cover", maxHeight: imageMaxHeight, maxWidth: imageMaxWidth };
 
     useEffect(() =>
         setClient(true),
@@ -31,7 +28,9 @@ const ImageHolder = (props) => {
         for (let i = 0; i < props.dataArray.length; i++) {
             array.push(
                 <div key={i}>
-                    <span className="dot" onClick={() => currentSlide(i)}></span>
+                    <span className="dot" 
+                    style={i === slideIndex ? {backgroundColor: "rgba(187, 187, 187, 0.4)"} : { backgroundColor: "#bbb"}} 
+                    onClick={() => currentSlide(i)}></span>
                 </div>
             );
         }
@@ -43,13 +42,13 @@ const ImageHolder = (props) => {
         createDotArray(dotArray)
     };
     return (
-        <div id="image-component-container" style={{ maxWidth: imageMaxWidth, maxHeight: imageMaxHeight }} key={isClient}>
+        <div id="image-main-container" key={isClient}>
             {isClient ? (
                 <>
                     <div className="slideshow-container">
                         <div className="mySlides fade">
-                            <img src={imageSource} style={styles} />
-                            <div className="text"><p>{imageCaption}</p></div>
+                            <img id="image" src={imageSource}  />
+                            <div className="text" style={imageCaption.length !== 0 ? {backgroundColor: "rgba(44, 44, 44, 0.5)"} : {backgroundColor: "transparent"}}><p>{imageCaption}</p></div>
                         </div>
                         <a className="prev" onClick={() => moveSlides(-1)}>&#10094;</a>
                         <a className="next" onClick={() => moveSlides(1)}>&#10095;</a>

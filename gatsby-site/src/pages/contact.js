@@ -1,5 +1,5 @@
 import React from 'react';
-
+import profile from "../../static/Profile.jpg";
 import '../styles/contact.scss';
 
 
@@ -8,7 +8,7 @@ const ContactPage = (props) => (
         <div className="contact-column-container">
             <div id="contact-text-container">
             <h2>Contact Us</h2>
-            <h3>Christian Flores-Moya</h3>
+            <h3>Christian Flores Moya</h3>
             <p>Se Habla Español</p>
             <p>(347) 500-4903</p>
             <p>Call and Text Ok!</p>
@@ -20,7 +20,7 @@ const ContactPage = (props) => (
         </div>
         <div className="contact-column-container">
             <div id="contact-image-container">
-            <img id="contact-image" src="http://3.bp.blogspot.com/-2CTKcO2eA6Y/VGa-zgan3uI/AAAAAAAAAPw/nnODoTaiUkc/s1600/BRAVO_Photo213.JPG"/>
+            <img id="contact-image" src={profile}/>
 
             </div>
         </div>

@@ -1,21 +1,32 @@
 // * {box-sizing:border-box}
-#image-component-container{
+
+#image-main-container {
+  height: 100%;
   width: 100%;
 }
-
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Hide the images by default */
 .mySlides {
   // display: none;
+  height: 100%;
+  width: 100%;
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -38,21 +49,19 @@
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
-  font-weight: 400;
-  padding-bottom: 1vh;
+  padding: 1vh;
   position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
-  background-color: rgba(44, 44, 44, 0.5);
 }
 
 /* Number text (1/3 etc) */
@@ -65,10 +74,9 @@
 }
 
 /* The dots/bullets/indicators */
-#dot-container{
+#dot-container {
   display: flex;
   justify-content: center;
-  
 }
 
 .dot {
@@ -76,13 +84,14 @@
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  // background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -95,11 +104,19 @@
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }

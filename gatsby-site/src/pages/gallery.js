@@ -6,18 +6,14 @@ import '../styles/gallery.scss';
 const GalleryPage = (props) => {
     const [currentData, setCurrentData] = useState(0);
     const [isClient, setClient] = useState(false);
-
     const modalRef = useRef(null);
-    const imageMaxHeight = isClient ? props.maxHeight : "400px";
-    const imageMaxWidth = isClient ? props.maxWidth : "400px";
-
     let colArray1 = [];
     let colArray2 = [];
     let colArray3 = [];
     let modal = <></>;
 
-    useEffect(() =>  
-        setClient(true), 
+    useEffect(() =>
+        setClient(true),
         []);
 
     const openModal = () => {
@@ -70,41 +66,43 @@ const GalleryPage = (props) => {
         }
     }
     if (isClient) {
-            createGalleryColumns(colArray1, colArray2, colArray3);
-            modal = (
-                <div className="modal" ref={modalRef}>
-                    <div className="overlay"></div>
-                    <span className="close" onClick={closeModal}>X</span>
-                    <div id="image-holder-container" style={{ width: imageMaxWidth, height: imageMaxHeight }}>
-                        <ImageHolder
-                            dataArray={props.dataArray[currentData].data}
-                            maxHeight={imageMaxHeight}
-                            maxWidth={imageMaxWidth}
-                        />
-                        {currentData}
-                    </div>
+        createGalleryColumns(colArray1, colArray2, colArray3);
+        modal = (
+            <div className="modal" ref={modalRef}>
+                <div className="overlay"></div>
+                <span className="close" onClick={closeModal}>X</span>
+                <div id="image-holder-container" >
+                    <ImageHolder
+                        dataArray={props.dataArray[currentData].data}
+                    />
+                    {currentData}
                 </div>
-            );
-        }
+            </div>
+        );
+    }
 
     return (
-        <div style={{ paddingTop: "15vh" }} key={isClient}>
-            <h2 id="gallery-title-text">Our Residential Work</h2>
+        <div key={isClient}>
+
             {isClient ?
                 (
                     <>
                         <div className="main-container" id="gallery-container">
-                            <div className="gallery-container-column">
-                                {colArray1}
+                            <h2 id="gallery-title-text">Our Residential Work</h2>
+                            <div id="gallery-column-container">
+                                <div className="gallery-container-column">
+                                    {colArray1}
+                                </div>
+                                <div className="gallery-container-column">
+                                    {colArray2}
+                                </div>
+                                <div className="gallery-container-column">
+                                    {colArray3}
+                                </div>
                             </div>
-                            <div className="gallery-container-column">
-                                {colArray2}
-                            </div>
-                            <div className="gallery-container-column">
-                                {colArray3}
-                            </div>
+
                         </div>
-                        {isClient? modal : <></>}
+                        {isClient ? modal : <></>}
                     </>
                 )
                 : <div className="main-container">

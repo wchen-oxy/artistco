@@ -29,7 +29,7 @@ const ImageHolder = (props) => {
             array.push(
                 <div key={i}>
                     <span className="dot" 
-                    style={i === slideIndex ? {backgroundColor: "rgba(187, 187, 187, 0.4)"} : { backgroundColor: "#bbb"}} 
+                    style={i === slideIndex ? {backgroundColor: "#4a4949"} : { backgroundColor: "#bbb"}} 
                     onClick={() => currentSlide(i)}></span>
                 </div>
             );
@@ -37,7 +37,6 @@ const ImageHolder = (props) => {
     }
 
     let dotArray = [];
-
     if (isClient) {
         createDotArray(dotArray)
     };

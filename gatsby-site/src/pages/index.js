@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import IntroPage from "./intro";
+import HighlightSection from "./highlight";
 import ServicePage from "./service";
 import GalleryPage from "./gallery"
 import PhilosophyPage from "./philosophy";
@@ -33,6 +34,7 @@ import {
   kitchenblack3,
   kitchenblack4
 } from "../styles/image-index";
+import AboutPage from "./about";
 
 const heroResidentialImages =
   [
@@ -171,17 +173,12 @@ const galleryResidentalImages = [
 
 ];
 
-const serviceImageMaxHeight = "450px";
-const serviceImageMaxWidth = "700px";
-const galleryImageMaxHeight = "600px";
-const galleryImageMaxWidth = "800px";
-
-
 export default function Home() {
   const homeRef = useRef(null);
   const residentialRef = useRef(null);
   const businessRef = useRef(null);
   const contactRef = useRef(null);
+  const aboutRef = useRef(null);
 
   useEffect(() => {
     lax.setup() // init
@@ -192,20 +189,30 @@ export default function Home() {
     window.requestAnimationFrame(updateLax)
   }, []);
 
-  const scrollTo = (reference) => reference.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollTo = (reference) => {
+    let blockPos = "start"
+    if (reference === contactRef) blockPos = "center";
+    reference.current.scrollIntoView({ behavior: 'smooth', block: blockPos })};
+    
   return (
     <>
       <header>
         <nav id="navigation-bar">
-          <button onClick={() => scrollTo(homeRef)}>Home</button>
+          <button onClick={() => scrollTo(homeRef)}><h4>Essential Works</h4></button>
           <button onClick={() => scrollTo(residentialRef)}>Residential Services</button>
           <button onClick={() => scrollTo(businessRef)}>Business Services</button>
+          <button onClick={() => scrollTo(aboutRef)}>About Us</button>
           <button onClick={() => scrollTo(contactRef)}>Contact Us</button>
         </nav>
       </header>
       <IntroPage
         reference={homeRef}
+        contactReference = {contactRef}
+        scrollTo={scrollTo}
       />
+      <HighlightSection>
+
+      </HighlightSection>
       <PhilosophyPage />
       <ServicePage
         reference={residentialRef}
@@ -221,6 +228,9 @@ export default function Home() {
         client="Business"
         orientation="image-right"
         dataArray={heroResidentialImages}
+      />
+      <AboutPage 
+        reference={aboutRef}
       />
       <ContactPage reference={contactRef} />
       <div className="main-container" id="footer-container">

@@ -1,0 +1,26 @@
+#highlight-container{
+    height: 60vh;
+    width: 90vw;
+    padding-top: 20vh;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.highlight-column-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    width: 25%;
+}
+.highlight-image{
+    object-fit: cover;
+}
+
+.highlight-image-container{
+    margin: 0 auto;
+    height: 30vh;
+    width: 20vw;
+}

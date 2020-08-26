@@ -43,17 +43,26 @@
     padding: 5vh;
 }
 
-h4.image-caption-text{
+#quote-button-container{
+    padding:1vh;
+}
+#quote-button-text{
+    text-decoration: underline;
     font-weight: 300;
+
 }
 
-p.image-caption-text{
+h4.image-caption-text{
+    font-weight: 300;
+    color: white;
+}
+
+p.image-caption-text, #quote-button-text{
     font-size: 14px;
-    font-weight: 100;
+    color: rgba(255, 255, 255, 0.849);
 }
 
 .image-caption-text{
-    color: white;
     font-weight: 200;
     padding: 1vh;
 }

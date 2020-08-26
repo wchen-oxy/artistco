@@ -1,24 +1,35 @@
-#services-main-container{
-    display:flex;
+#services-main-container {
+    display: flex;
     height: 100vh;
 }
 
-#service-text-container{
+#service-text-container {
     width: 40%;
     margin: auto;
     padding: 5vh;
 }
 
-#service-title-container{
+#service-title-container {
     text-align: center;
     padding-bottom: 2vh;
 }
 
-
-#service-image-container{
+#service-image-container {
     height: 60vh;
     width: 50vw;
     margin: auto;
 }
 
+@media screen and (max-width: 899px) {
+    #services-main-container {
+        height: 100%;
+        flex-direction: column;
+    }
+    #service-image-container{
+        width: 100vw;
+    }
 
+    #service-text-container{
+        width: 100vw;
+    }
+}

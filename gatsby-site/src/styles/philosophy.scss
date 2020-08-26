@@ -3,7 +3,7 @@
     height: 100vh;
 }
 
-#philosophy-text-container {
+.philosophy-text-container {
     margin: auto;
     background-color: rgba(73, 72, 72, 0.10);
     padding: 5vh;
@@ -20,6 +20,29 @@
     padding-bottom:2vh;
 }
 
+#mobile-philosophy-text {
+    display: none;
+}
+
+@media screen and (max-width: 899px) {
+    #philosophy-container{
+        flex-direction: column;
+        height: 100%;
+    }
+    #philosophy-image-container {
+        width: 100vw;
+        height: 60vh;
+        margin: 0;
+    }
+    #desktop-philosophy-text{
+        display: none;
+    }
+
+    #mobile-philosophy-text{
+        display: block;
+        margin: 0;
+    }
+}
 
 // .side-image{
 //     position: absolute;

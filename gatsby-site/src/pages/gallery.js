@@ -35,7 +35,9 @@ const GalleryPage = (props) => {
         <div key={index} className="thumbnail-container" onClick={() => open(index)}>
             <img className="thumbnail-image" src={thumbnail}></img>
             <div className="caption-overlay">
+                <div className="caption-text-container">
                 <p className="caption-text">{caption}</p>
+                </div>
             </div>
         </div>
     );
@@ -90,13 +92,13 @@ const GalleryPage = (props) => {
                         <div className="main-container" id="gallery-container">
                             <h2 id="gallery-title-text">Our Residential Work</h2>
                             <div id="gallery-column-container">
-                                <div className="gallery-container-column">
+                                <div className="gallery-column">
                                     {colArray1}
                                 </div>
-                                <div className="gallery-container-column">
+                                <div className="gallery-column">
                                     {colArray2}
                                 </div>
-                                <div className="gallery-container-column">
+                                <div className="gallery-column">
                                     {colArray3}
                                 </div>
                             </div>

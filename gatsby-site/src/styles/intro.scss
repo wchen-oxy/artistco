@@ -12,6 +12,10 @@
 
 //Title Text
 
+#intro-title-container {
+    text-align: center;
+}
+
 #intro-main-desc { 
     align-self: center;
     width: 25%;
@@ -26,12 +30,14 @@
     height: 5vh;
 }
 
-//Title Image 
 #intro-image{
     object-fit: cover;
     height: 100vh;
     width: 100%;
 }
+
+//Title Image 
+
 
 #image-float-caption-container{
     z-index: 1;
@@ -66,3 +72,41 @@ p.image-caption-text, #quote-button-text{
     font-weight: 200;
     padding: 1vh;
 }
+
+#image-no-float-caption-container{
+    display: none;
+}
+// Mobile
+
+@media screen and (max-width: 899px) {
+    #intro-main-container{
+       
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #intro-main-desc { 
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+        width: 50%;
+    }
+
+    #intro-main-image-container{
+        width: 100%;   
+        overflow: visible;     
+    }
+    #intro-image{
+        height: 60vh;
+    }
+
+    #image-float-caption-container{
+      display: none;
+    }
+    #image-no-float-caption-container{
+        display: flex;
+        background-color: rgba(44, 44, 44, 0.922);
+        padding: 1vh;
+    }
+   
+ }

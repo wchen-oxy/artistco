@@ -64,9 +64,6 @@ nav button:hover {
     color: rgba(0, 0, 0, 0.548);
 }
 
-.center-text{
-    text-align: center;
-}
 
 .main-container{
     // margin-top: 13vh;
@@ -88,3 +85,16 @@ nav button:hover {
     display: block;
 }
 
+@media screen and (max-width: 899px) {
+    html, body {
+        overflow-x:hidden 
+      } 
+
+      .main-container{
+        // margin-top: 13vh;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+}

@@ -10,20 +10,20 @@ import sideImage7 from "../../static/altered/side-image-7.jpg";
 
 const HighlightSection = (props) => (
     <div className="main-container" id="highlight-container">
-        <div className="highlight-column-container">
+        <div className="highlight-column-container" id="highlight-container-1">
             <div className="highlight-image-container">
                 <img className="fit-image-to-container highlight-image" src={sideImage7} />
                 <h4>Quality</h4>
 
             </div>
         </div>
-        <div className="highlight-column-container">
+        <div className="highlight-column-container" id="highlight-container-2">
             <div className="highlight-image-container">
                 <img className="fit-image-to-container highlight-image" src={sideImage6} />
                 <h4>Artistry</h4>
             </div>        
         </div>
-        <div className="highlight-column-container">
+        <div className="highlight-column-container" id="highlight-container-3">
             <div className="highlight-image-container">
                 <img className="fit-image-to-container highlight-image" src={sideImage2} />
                 <h4>Craftsmanship</h4>

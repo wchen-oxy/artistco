@@ -8,7 +8,6 @@ module.exports = {
   /* Your site config here */
   plugins: [
     'gatsby-plugin-sass',
-    `gatsby-plugin-glamor`
   ],
   // pathPrefix: `/artistco/gatsby-site`,
 }

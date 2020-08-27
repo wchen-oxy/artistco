@@ -1,108 +1,208 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;600&display=swap");
 
 // Navbar
-html h1, h2, h3, h4, p, button {
+html h1,
+h2,
+h3,
+h4,
+p,
+a,
+button {
     scroll-behavior: smooth;
     font-family: Work Sans, sans-serif;
     position: relative;
-  }
-  body, html {
+}
+body,
+html {
     height: 100%;
-  }
+}
 
-  p{
-      font-weight: 200;
-      font-size: 16px;
-  }
+p {
+    font-weight: 200;
+    font-size: 16px;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+}
 
-nav {
+#web-navigation-bar {
     width: 100%;
     height: 5vh;
     background-color: white;
     position: fixed;
     z-index: 99;
-    display: flex;   
+    display: flex;
 }
 
-.nav-item-container{
-    height:100%;
+.nav-item-container {
+    height: 100%;
     // margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-nav button {
+#web-navigation-bar button {
     background-color: Transparent;
     color: black;
     border: none;
-    cursor:pointer;
+    cursor: pointer;
     overflow: hidden;
     font-size: 16px;
     font-weight: 200;
-    outline:none;
+    outline: none;
     width: 100%;
     transition: background-color 1s ease;
 }
 
-nav button:hover {
+#web-navigation-bar button:hover {
     background: grey;
     color: white;
 }
-
+#mobile-navigation-bar {
+    display: none;
+}
 
 //Other
 
-#footer-container{
-    text-align:center;
-    padding-top: 15vh;
+#footer-container {
+    text-align: center;
+
     padding-bottom: 5vh;
     color: rgba(0, 0, 0, 0.548);
 }
 
-
-.main-container{
+.main-container {
     margin-left: 13vh;
     margin-right: 13vh;
     margin-top: 15vh;
     margin-bottom: 15vh;
 }
 
-.fit-image-to-container{
+.fit-image-to-container {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.centered-button{
+.centered-button {
     margin: 0 auto;
     display: block;
 }
 
 @media screen and (max-width: 899px) {
     //BEGIN TEMP FIX FOR CHANGING VIEWPORT SIZE
-    #app-container{
+    #app-container {
         height: 100%;
     }
-    html, body  {
+    html,
+    body {
         overflow-x: hidden;
         height: 100%;
-      } 
-
-      //END TEMP FIX FOR CHANGING VIEWPORT SIZE
-
-      .main-container{
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
     }
 
-   
+    //END TEMP FIX FOR CHANGING VIEWPORT SIZE
+
+    .main-container {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20vh;
+        margin-bottom: 0vh;
+    }
+
+    #web-navigation-bar {
+        display: none;
+    }
+    #mobile-navigation-bar {
+        display: flex;
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        height: 10vw;
+        z-index: 500;
+    }
+
+    // Navbar Styling for Mobile Menu
+    .menu-item {
+        color: white;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+    }
+    .menu-item:hover {
+        color: rgba(255, 255, 255, 0.753);
+    }
+
+    /* Position and sizing of burger button */
+    .bm-burger-button {
+        position: fixed;
+        width: 7vw;
+        height: 5vw;
+        left: 5vw;
+        top: 2.5vw;
+    }
+
+    /* Color/shape of burger icon bars */
+    .bm-burger-bars {
+        background: #373a47;
+    }
+
+    /* Color/shape of burger icon bars on hover*/
+    .bm-burger-bars-hover {
+        background: rgba(44, 44, 44, 0.5);
+    }
+
+    /* Position and sizing of clickable cross button */
+    .bm-cross-button {
+        height: 24px;
+        width: 24px;
+    }
+
+    /* Color/shape of close button cross */
+    .bm-cross {
+        background: #bdc3c7;
+    }
+
+    /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+    .bm-menu-wrap {
+        position: fixed;
+        height: 100%;
+    }
+
+    /* General sidebar styles */
+    .bm-menu {
+        background: #373a47;
+        padding: 2.5em 1.5em 0;
+        font-size: 1.15em;
+    }
+
+    /* Morph shape necessary with bubble or elastic */
+    .bm-morph-shape {
+        fill: #373a47;
+    }
+
+    /* Wrapper for item list */
+    .bm-item-list {
+        color: #b8b7ad;
+        padding: 0.8em;
+    }
+
+    /* Individual item */
+    .bm-item {
+        display: inline-block;
+    }
+
+    /* Styling of overlay */
+    .bm-overlay {
+        background: rgba(0, 0, 0, 0.3);
+    }
 }

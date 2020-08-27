@@ -27,10 +27,10 @@ const PhilosophyPage = (props) => {
             <div id="philosophy-image-container">
                 <img
                     alt="hard work image"
-                    className="lax fit-image-to-container"
+                    className="fit-image-to-container"
                     src={philosophyHeroImage}
-                    data-lax-translate-y="300 50, 930 0"
-                    data-lax-opacity="300 0, 700 1"
+                    // data-lax-translate-y="300 50, 930 0"
+                    // data-lax-opacity="300 0, 700 1"
 
                 />
                 {/* <img

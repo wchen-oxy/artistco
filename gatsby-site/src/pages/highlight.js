@@ -26,7 +26,7 @@ const HighlightSection = (props) => (
         <div className="highlight-column-container" id="highlight-container-3">
             <div className="highlight-image-container">
                 <img className="fit-image-to-container highlight-image" src={sideImage2} />
-                <h4>Craftsmanship</h4>
+                <h4>Detailed</h4>
             </div>        
         </div>
     </div>

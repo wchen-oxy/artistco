@@ -4,9 +4,9 @@ import '../styles/contact.scss';
 
 
 const ContactPage = (props) => (
-    <div className="main-container" id="contact-main-container" ref={props.reference} >
+    <div className="main-container" id="contact-main-container" >
         <div className="contact-column-container">
-            <div id="contact-text-container">
+            <div id="contact-text-container"  ref={props.reference}>
                 <h1>Contact Us</h1>
                 <div className="contact-text-section">
                     <h3>Christian Flores Moya</h3>
@@ -24,7 +24,7 @@ const ContactPage = (props) => (
 
             </div>
         </div>
-        <div className="contact-column-container">
+        <div className="contact-column-container" id="google-form-container">
             <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSeq0ywW0K1WxkKr3vAv-mhM4xmqBkioCxE1XM1Jjf3xZ129gA/viewform?embedded=true"
                 width="100%"

@@ -12,27 +12,24 @@ const ServicePage = (props) => {
     // const imageMaxHeight = isClient ? props.dataArray.maxHeight : "400px";
     // const imageMaxWidth = isClient ? props.dataArray.maxWidth : "400px";
 
+    const image = (<div id="service-image-container">
+        {/* {props.client === "Residential" ? "Residential" : "Business"} */}
+        {props.client === "Residential" ?
+            <ImageHolder
+                dataArray={props.dataArray}
+            /> :
+            (<img
+                id="service-business-img"
+                alt="client image"
+                className="fit-image-to-container"
+                src="https://galio.lt/wp-content/uploads/2020/05/homepage-verslui.jpg" />
+            )}
+    </div>);
     const imageContainer = (
-        isClient ?
-            <div id="service-image-container">
-                {/* {props.client === "Residential" ? "Residential" : "Business"} */}
-                {props.client === "Residential" ?
-                    <ImageHolder
-                        dataArray={props.dataArray}
-                    /> :
-                    (<img
-                        id="service-business-img"
-                        alt="client image"
-                        className="fit-image-to-container"
-                        src="https://galio.lt/wp-content/uploads/2020/05/homepage-verslui.jpg" />
-                    )}
-            </div>
-            :
+        isClient ? image : (
             <div id="service-image-container">
                 <p> Something went wrong.</p>
-            </div>
-
-
+            </div>)
 
     );
 

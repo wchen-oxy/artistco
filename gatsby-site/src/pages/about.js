@@ -4,11 +4,10 @@ import '../styles/about.scss';
 
 
 const AboutPage = (props) => (
-    <div className="main-container" id="about-main-container" ref={props.reference} >
-        <div className="about-column-container">
-            <div id="about-image-container">
-                <img id="about-image" src={profile} />
-
+    <div className="main-container" id="about-main-container"   >
+        <div className="about-column-container" >
+            <div id="about-image-container" >
+                <img id="about-image" src={profile} ref={props.reference}/>
             </div>
         </div>
         <div className="about-column-container">

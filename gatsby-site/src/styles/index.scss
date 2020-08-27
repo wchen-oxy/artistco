@@ -6,6 +6,9 @@ html h1, h2, h3, h4, p, button {
     font-family: Work Sans, sans-serif;
     position: relative;
   }
+  body, html {
+    height: 100%;
+  }
 
   p{
       font-weight: 200;
@@ -65,7 +68,6 @@ nav button:hover {
 
 
 .main-container{
-    // margin-top: 13vh;
     margin-left: 13vh;
     margin-right: 13vh;
     margin-top: 15vh;
@@ -76,7 +78,6 @@ nav button:hover {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    // overflow: hidden;
 }
 
 .centered-button{
@@ -85,15 +86,23 @@ nav button:hover {
 }
 
 @media screen and (max-width: 899px) {
-    html, body {
-        overflow-x: hidden 
+    //BEGIN TEMP FIX FOR CHANGING VIEWPORT SIZE
+    #app-container{
+        height: 100%;
+    }
+    html, body  {
+        overflow-x: hidden;
+        height: 100%;
       } 
 
+      //END TEMP FIX FOR CHANGING VIEWPORT SIZE
+
       .main-container{
-        // margin-top: 13vh;
         margin-left: 0;
         margin-right: 0;
         margin-top: 10vh;
         margin-bottom: 10vh;
     }
+
+   
 }

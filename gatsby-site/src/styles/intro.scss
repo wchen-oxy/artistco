@@ -1,11 +1,10 @@
-//Outer Containers 
-#intro-main-container{
-    height: 105vh;
+//Outer Containers
+#intro-main-container {
     width: 100%;
     display: flex;
 }
 
-.intro-main-columns{
+.intro-main-columns {
     display: flex;
     flex-direction: column;
 }
@@ -16,7 +15,7 @@
     text-align: center;
 }
 
-#intro-main-desc { 
+#intro-main-desc {
     align-self: center;
     width: 25%;
 }
@@ -26,87 +25,85 @@
     // overflow: hidden;
 }
 
-#spacer-div{
+#spacer-div {
     height: 5vh;
 }
 
-#intro-image{
+#intro-image {
     object-fit: cover;
     height: 100vh;
     width: 100%;
 }
 
-//Title Image 
+//Title Image
 
-
-#image-float-caption-container{
+#image-float-caption-container {
     z-index: 1;
     background-color: rgba(44, 44, 44, 0.922);
     width: 30vw;
     height: auto;
     position: absolute;
-    bottom: -5vh;   
+    bottom: -5vh;
     padding: 5vh;
 }
 
-#quote-button-container{
-    padding:1vh;
+#quote-button-container button {
+    padding: 1vh;
+    background-color: rgba(44, 44, 44, 0.922);
 }
-#quote-button-text{
+#quote-button-text {
     text-decoration: underline;
     font-weight: 300;
-
 }
 
-h4.image-caption-text{
+h4.image-caption-text {
     font-weight: 300;
     color: white;
 }
 
-p.image-caption-text, #quote-button-text{
+p.image-caption-text,
+#quote-button-text {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.849);
 }
 
-.image-caption-text{
+.image-caption-text {
     font-weight: 200;
     padding: 1vh;
 }
 
-#image-no-float-caption-container{
+#image-no-float-caption-container {
     display: none;
 }
 // Mobile
 
-@media screen and (max-width: 899px) {
-    #intro-main-container{
+@media screen and (max-width: 900px) {
+    #intro-main-container {
         width: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    #intro-main-desc { 
+    #intro-main-desc {
         margin-top: 10vh;
         margin-bottom: 5vh;
         width: 50%;
     }
 
-    #intro-main-image-container{
-        width: 100%;   
+    #intro-main-image-container {
+        width: 100%;
     }
-    #intro-image{
-        max-width: 100%;
+    #intro-image {
+        object-fit: cover;
         width: 100%;
         height: 60vh;
     }
 
-    #image-float-caption-container{
-      display: none;
-    }
-    #image-no-float-caption-container{
+    #image-float-caption-container {
+        position: static;
         display: flex;
-        background-color: rgba(44, 44, 44, 0.922);
+        flex-direction: column;
+        width: 100vw;
         padding: 1vh;
     }
-   
- }
+}

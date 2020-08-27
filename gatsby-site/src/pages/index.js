@@ -181,7 +181,7 @@ export default function Home() {
   const aboutRef = useRef(null);
 
   useEffect(() => {
-    lax.setup() // init
+    lax.setup()  
     const updateLax = () => {
       lax.update(window.scrollY)
       window.requestAnimationFrame(updateLax)
@@ -195,7 +195,7 @@ export default function Home() {
     reference.current.scrollIntoView({ behavior: 'smooth', block: blockPos })};
     
   return (
-    <>
+    <div id="app-container">
       <header>
         <nav id="navigation-bar">
           <button onClick={() => scrollTo(homeRef)}><h4>Essential Works</h4></button>
@@ -236,6 +236,6 @@ export default function Home() {
       <div className="main-container" id="footer-container">
         <footer><p>Essential Works LLC &copy;</p></footer>
       </div>
-    </>
+    </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../styles/intro.scss';
-import '../styles/copied-styles.scss';
+// import '../styles/copied-styles.scss';
 
 
 const IntroPage = (props) => (
@@ -34,18 +34,18 @@ const IntroPage = (props) => (
                     We specialize in a variety of major home improvement projects which includes additions,
                     kitchen and bathroom remodels, major renovations and home repairs.
                     </p>
+                    
                 <div id="quote-button-container">
-                    <div class="btn btn-three">
-                        <span onClick={() => props.scrollTo(props.contactReference)}><p id="quote-button-text">Get A Quote</p></span>
-                    </div>
+                    {/* <div class="btn btn-three"> */}
+                        <button onClick={() => props.scrollTo(props.contactReference)}><p id="quote-button-text">Get A Quote</p></button>
+                    {/* </div> */}
                 </div>
-                {/* <button id="get-quote-button"><p id="get-quote-button-text" className="image-caption-text">Get A Quote</p></button> */}
                 <div id="spacer-div"></div>
             </div>
 
         </div>
 
-        <div
+        {/* <div
             className="intro-main-columns"
             id="image-no-float-caption-container"
         // className="lax"
@@ -63,7 +63,7 @@ const IntroPage = (props) => (
                     <span onClick={() => props.scrollTo(props.contactReference)}><p id="quote-button-text">Get A Quote</p></span>
                 </div>
             </div>
-        </div>
+        </div> */}
 
 
     </div>

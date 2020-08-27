@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import ImageHolder from "./image";
 import '../styles/gallery.scss';
 
@@ -18,12 +19,14 @@ const GalleryPage = (props) => {
 
     const openModal = () => {
         modalRef.current.style.display = "flex";
-        document.body.style.overflow = "hidden";
+        disableBodyScroll(document.body);
+        // document.body.style.overflow = "hidden";
 
     }
     const closeModal = () => {
         modalRef.current.style.display = "none";
-        document.body.style.overflow = "visible";
+        enableBodyScroll(document.body);
+        // document.body.style.overflow = "unset";
     }
 
     const open = (i) => {
@@ -72,7 +75,7 @@ const GalleryPage = (props) => {
         modal = (
             <div className="modal" ref={modalRef}>
                 <div className="overlay"></div>
-                <span className="close" onClick={closeModal}>X</span>
+                <span className="close" onClick={closeModal}><h3>X</h3></span>
                 <div id="image-holder-container" >
                     <ImageHolder
                         dataArray={props.dataArray[currentData].data}

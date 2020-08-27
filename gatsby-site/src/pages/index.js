@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { stack as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu'
 
 import IntroPage from "./intro";
 import HighlightSection from "./highlight";

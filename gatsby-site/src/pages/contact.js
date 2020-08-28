@@ -29,9 +29,9 @@ const ContactPage = (props) => (
                 src="https://docs.google.com/forms/d/e/1FAIpQLSeq0ywW0K1WxkKr3vAv-mhM4xmqBkioCxE1XM1Jjf3xZ129gA/viewform?embedded=true"
                 width="100%"
                 height="100%"
-                frameborder="0"
-                marginheight="0"
-                marginwidth="0">Loading…</iframe>
+                frameBorder="0"
+                marginHeight="0"
+                marginWidth="0">Loading…</iframe>
         </div>
     </div>
 )

@@ -139,6 +139,10 @@ p {
         color: rgba(255, 255, 255, 0.753);
     }
 
+    .menu-item {
+        outline:none;
+    }
+
     /* Position and sizing of burger button */
     .bm-burger-button {
         position: fixed;

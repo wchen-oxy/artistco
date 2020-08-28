@@ -9,7 +9,7 @@ const ImageHolder = (props) => {
 
     useEffect(() =>
         setClient(true),
-        []);
+        [props.dataArray]);
 
     const moveSlides = (n) => {
         let index = slideIndex;

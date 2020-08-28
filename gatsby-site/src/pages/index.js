@@ -248,9 +248,9 @@ export default function Home() {
         contactReference={contactRef}
         scrollTo={scrollTo}
       />
-      <HighlightSection>
+      {/* <HighlightSection>
 
-      </HighlightSection>
+      </HighlightSection> */}
       <PhilosophyPage />
       <ServicePage
         reference={residentialRef}

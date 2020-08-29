@@ -7,11 +7,11 @@ const stockPhotoWorkUrl = "https://s3.amazonaws.com/craftsman-brand-staging/comf
 
 const PhilosophyPage = (props) => {
     const firstImage = useRef(null);
-    useEffect(() =>
-        window.addEventListener('scroll', function () {
-            console.log(window.pageYOffset + 'px');
-        })
-    );
+    // useEffect(() =>
+    //     window.addEventListener('scroll', function () {
+    //         console.log(window.pageYOffset + 'px');
+    //     })
+    // );
 
     return (
         <div id="philosophy-container" className="main-container">

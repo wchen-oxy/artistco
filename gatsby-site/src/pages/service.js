@@ -28,7 +28,7 @@ const ServicePage = (props) => {
     const imageContainer = (
         isClient ? image : (
             <div id="service-image-container">
-                <p> Something went wrong.</p>
+              
             </div>)
 
     );

@@ -4,12 +4,20 @@ import '../styles/image.scss';
 const ImageHolder = (props) => {
     const [slideIndex, setSlideIndex] = useState(0);
     const [isClient, setClient] = useState(false);
-    const imageSource = isClient ? props.dataArray[slideIndex].url : "";
-    const imageCaption = isClient ? props.dataArray[slideIndex].caption : "";
+    // const [imageSource, setImageSource] = useState("");
+    // const [imageCaption, setImageCaption] = useState("");
+    console.log("static");
+    console.log(isClient);
+    console.log(slideIndex);
+    console.log(props.dataArray);
+    const imageSource = isClient && props.dataArray ? props.dataArray[slideIndex].url : "";
+    const imageCaption = isClient && props.dataArray ? props.dataArray[slideIndex].caption : "";
 
-    useEffect(() =>
-        setClient(true),
-        [props.dataArray]);
+    useEffect(() => {
+        setClient(true);
+        console.log("Effect")        
+    },
+        []);
 
     const moveSlides = (n) => {
         let index = slideIndex;
@@ -24,40 +32,39 @@ const ImageHolder = (props) => {
         setSlideIndex(n)
     );
 
-    const createDotArray = (array) => {
+    const createDotArray = () => {
+        let array = [];
         for (let i = 0; i < props.dataArray.length; i++) {
             array.push(
                 <div key={i}>
-                    <span className="dot" 
-                    style={i === slideIndex ? {backgroundColor: "#4a4949"} : { backgroundColor: "#bbb"}} 
-                    onClick={() => currentSlide(i)}></span>
+                    <span className="dot"
+                        style={i === slideIndex ? { backgroundColor: "#4a4949" } : { backgroundColor: "#bbb" }}
+                        onClick={() => currentSlide(i)}></span>
                 </div>
             );
         }
+        return array;
     }
+    console.log("Effect");
 
-    let dotArray = [];
-    if (isClient) {
-        createDotArray(dotArray)
-    };
     return (
         <div id="image-main-container" key={isClient}>
-            {isClient ? (
+            {isClient && props.dataArray ? (
                 <>
                     <div className="slideshow-container">
                         <div className="mySlides fade">
-                            <img id="image" src={imageSource}  />
-                            <div className="text" style={imageCaption.length !== 0 ? {backgroundColor: "rgba(44, 44, 44, 0.5)"} : {backgroundColor: "transparent"}}><p>{imageCaption}</p></div>
+                            <img id="image" src={imageSource} />
+                            <div className="text" style={imageCaption.length !== 0 ? { backgroundColor: "rgba(44, 44, 44, 0.5)" } : { backgroundColor: "transparent" }}><p>{imageCaption}</p></div>
                         </div>
                         <a className="prev" onClick={() => moveSlides(-1)}>&#10094;</a>
                         <a className="next" onClick={() => moveSlides(1)}>&#10095;</a>
                     </div>
                     <br></br>
                     <div id="dot-container">
-                        {dotArray}
+                        {createDotArray()}
                     </div>
                 </>) :
-                <p>The images need to be rendered again. Please refresh your page.</p>
+                <p></p>
             }
         </div>
     );

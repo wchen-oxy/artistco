@@ -16,7 +16,6 @@ const GalleryPage = (props) => {
     // const [imageHolder, setImageHolder] = useState(<></>)
     const modalRef = useRef(null);
     useEffect(() => {
-        console.log("GAL SET");
         setClient(true);
         createGalleryColumns();
     }, []);

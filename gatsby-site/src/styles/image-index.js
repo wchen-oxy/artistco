@@ -2,6 +2,14 @@ export const kitchen = require("../../static/constructionWebImages/kitchen1-2.jp
 export const bathroom = require("../../static/constructionWebImages/paint2.jpg");
 export const wall = require("../../static/constructionWebImages/wall1.jpg");
 
+//icon
+export const phoneCall = require("../../static/phone-call.png");
+export const instagram = require("../../static/icons/IG_Glyph_Fill.gif");
+export const facebook = require("../../static/icons/f_logo_RGB-Blue_100.png");
+export const yelp = require("../../static/icons/burst_icon@2x.png");
+
+
+
 //gallery export consts
 export const bathroom12before = require("../../static/residential-gallery/bathroom/bath12before.jpg");
 export const bathroom12after = require("../../static/residential-gallery/bathroom/bath12after.jpg");

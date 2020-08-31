@@ -11,6 +11,7 @@ import lax from "lax.js";
 import "../styles/index.scss";
 
 import {
+  phoneCall,
   kitchen,
   bathroom,
   wall,
@@ -181,7 +182,26 @@ export default function Home() {
   const businessRef = useRef(null);
   const contactRef = useRef(null);
   const aboutRef = useRef(null);
+  const dropDownButtonRef = useRef(null);
+  const dropDownMenuRef = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside, true);
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true);
+    };
+  }, [dropDownMenuRef]);
+
+  const handleClickOutside = (event) => {
+    if (dropDownMenuRef.current.style.display === "block" && !dropDownMenuRef.current.contains(event.target)
+   && !dropDownButtonRef.current.contains(event.target)) {
+      console.log("Block launched");
+      setDropdownOpen(false);
+      dropDownMenuRef.current.style.display = "none";
+    }
+  }
 
   const handleMenuStateChange = (state) => (
     setMenuOpen(state)
@@ -212,33 +232,68 @@ export default function Home() {
     reference.current.scrollIntoView({ behavior: 'smooth', block: blockPos })
   }
 
-  const showSettings  = (event) => {
+  const showSettings = (event) => {
     event.preventDefault();
   }
 
+  const toggleDropdown = () => {
+    // const dropdownOpen = dropdownRef.current.style.display;
+    // console.log(dropdownRef.current.style.display);
+    if (!dropdownOpen) {
+      console.log('toggle');
+      dropDownMenuRef.current.style.display = "block";
+    }
+    else{
+      console.log("dropdown block");
+      dropDownMenuRef.current.style.display = "none";
+    }
+    setDropdownOpen(!dropdownOpen);
+  }
   return (
     <div id="app-container">
       <header>
         <nav id="web-navigation-bar">
           <button onClick={() => scrollTo(homeRef)}><h4>Essential Works</h4></button>
-          <button onClick={() => scrollTo(residentialRef)}>Residential Services</button>
+          <div className="dropdown">
+            <button onClick={toggleDropdown} className="dropbtn" ref={dropDownButtonRef}>Services</button>
+            <div id="myDropdown" className="dropdown-content" ref={dropDownMenuRef}>
+            <button onClick={() => scrollTo(residentialRef)}>Residential Services</button>
           <button onClick={() => scrollTo(businessRef)}>Business Services</button>
+            </div>
+          </div>
+          {/* <button onClick={() => scrollTo(residentialRef)}>Residential Services</button>
+          <button onClick={() => scrollTo(businessRef)}>Business Services</button> */}
           <button onClick={() => scrollTo(aboutRef)}>About Us</button>
+          <button onClick={() => scrollTo(aboutRef)}>Get a Quote</button>
           <button onClick={() => scrollTo(contactRef)}>Contact Us</button>
+          <a id="phone-link" href="tel:347-494-1802"><img id="phone-image" src={phoneCall} />(347) 494-1802</a>
+
+          {/* <div className="phone-item-container" >
+              <a href="tel:123-456-7890">123-456-7890</a>
+            </div> */}
+
         </nav>
         <div id="mobile-navigation-bar">
-        <Menu 
-          // outerContainerId={ "mobile-navigation-bar"}
-          isOpen={menuOpen}
-          onStateChange={(state) => handleMenuStateChange(state.isOpen)}
+          <Menu
+            // outerContainerId={ "mobile-navigation-bar"}
+            isOpen={menuOpen}
+            onStateChange={(state) => handleMenuStateChange(state.isOpen)}
           >
-          <a id="home" className="menu-item" onClick={() => scrollToMobile(homeRef)}>Home</a>
-          <a id="residential" className="menu-item" onClick={() => scrollToMobile(residentialRef)}>Residential</a>
-          <a id="business" className="menu-item" onClick={() => scrollToMobile(businessRef)}>Business</a>
-          <a id="about" className="menu-item" onClick={() => scrollToMobile(aboutRef)}>About</a>
-          <a id="contact" className="menu-item" onClick={() => scrollToMobile(contactRef)}>Contact</a>
-          {/* <a onClick={showSettings} className="menu-item--small" href="">Settings</a> */}
-        </Menu>
+            <a id="home" className="menu-item" onClick={() => scrollToMobile(homeRef)}>Home</a>
+            <a id="residential" className="menu-item" onClick={() => scrollToMobile(residentialRef)}>Residential</a>
+            <a id="business" className="menu-item" onClick={() => scrollToMobile(businessRef)}>Business</a>
+            <a id="about" className="menu-item" onClick={() => scrollToMobile(aboutRef)}>About</a>
+            <a id="contact" className="menu-item" onClick={() => scrollToMobile(contactRef)}>Contact</a>
+            {/* <a onClick={showSettings} className="menu-item--small" href="">Settings</a> */}
+          </Menu>
+          <div className="phone-item-container" >
+            <a id="phone-link" href="tel:347-494-1802"><img id="phone-image" src={phoneCall} />(347) 494-1802</a>
+          </div>
+
+          {/* <div id="mobile-phone" >
+        <img id="phone-image" src={phoneCall} />
+        </div> */}
+
         </div>
 
       </header>
@@ -267,12 +322,15 @@ export default function Home() {
         orientation="image-right"
         dataArray={heroResidentialImages}
       />
+      <div className="main-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeq0ywW0K1WxkKr3vAv-mhM4xmqBkioCxE1XM1Jjf3xZ129gA/viewform?embedded=true" height="1190" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>      
+        </div>
       <AboutPage
         reference={aboutRef}
       />
       <ContactPage reference={contactRef} />
       <div className="main-container" id="footer-container">
-        <footer><p>Essential Works LLC &copy;</p></footer>
+        <footer><p>Essential Works, LLC &copy;</p></footer>
       </div>
     </div>
   )

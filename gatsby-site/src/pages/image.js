@@ -4,18 +4,11 @@ import '../styles/image.scss';
 const ImageHolder = (props) => {
     const [slideIndex, setSlideIndex] = useState(0);
     const [isClient, setClient] = useState(false);
-    // const [imageSource, setImageSource] = useState("");
-    // const [imageCaption, setImageCaption] = useState("");
-    console.log("static");
-    console.log(isClient);
-    console.log(slideIndex);
-    console.log(props.dataArray);
     const imageSource = isClient && props.dataArray ? props.dataArray[slideIndex].url : "";
     const imageCaption = isClient && props.dataArray ? props.dataArray[slideIndex].caption : "";
 
     useEffect(() => {
         setClient(true);
-        console.log("Effect")        
     },
         []);
 
@@ -45,8 +38,6 @@ const ImageHolder = (props) => {
         }
         return array;
     }
-    console.log("Effect");
-
     return (
         <div id="image-main-container" key={isClient}>
             {isClient && props.dataArray ? (

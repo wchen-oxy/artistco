@@ -12,7 +12,7 @@ const ContactPage = (props) => (
                 <div className="contact-text-section">
                     <h3>Christian Flores Moya</h3>
                     <p>Se Habla Español</p>
-                    <p>(347) 500-4903</p>
+                    <p>(347) 494-1802</p>
                     <p>Call and Text Ok!</p>
                     <p>info@essential-works.com</p>
                 </div>

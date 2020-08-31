@@ -300,7 +300,7 @@ export default function Home() {
 
       <IntroPage
         reference={homeRef}
-        contactReference={contactRef}
+        quoteReference={contactRef}
         scrollTo={scrollTo}
       />
       {/* <HighlightSection>
@@ -309,18 +309,23 @@ export default function Home() {
       <PhilosophyPage />
       <ServicePage
         reference={residentialRef}
+        quoteReference={aboutRef}
         client="Residential"
         orientation="image-left"
         dataArray={heroResidentialImages}
+        scrollTo={scrollTo}
       />
       <GalleryPage
         dataArray={galleryResidentalImages}
       />
       <ServicePage
         reference={businessRef}
+        quoteReference={aboutRef}
         client="Business"
         orientation="image-right"
         dataArray={heroResidentialImages}
+        scrollTo={scrollTo}
+
       />
       <div className="main-container">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeq0ywW0K1WxkKr3vAv-mhM4xmqBkioCxE1XM1Jjf3xZ129gA/viewform?embedded=true" height="1190" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>      

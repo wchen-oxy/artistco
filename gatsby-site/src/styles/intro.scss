@@ -47,13 +47,16 @@
     padding: 5vh;
 }
 
-#quote-button-container button {
-    padding: 1vh;
+
+#intro-quote-button{
+    border: 0.1em solid #ffffff;
     background-color: rgba(44, 44, 44, 0.922);
+    color: white;
 }
-#quote-button-text {
-    text-decoration: underline;
-    font-weight: 300;
+
+#intro-quote-button:hover {
+    background-color: white;
+    color: rgba(44, 44, 44, 0.922);
 }
 
 h4.image-caption-text {
@@ -61,8 +64,7 @@ h4.image-caption-text {
     color: white;
 }
 
-p.image-caption-text,
-#quote-button-text {
+p.image-caption-text {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.849);
 }

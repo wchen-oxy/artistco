@@ -43,10 +43,8 @@ const ServicePage = (props) => {
                 A place to clear your mind, to connect, to engage.
                 A place not just to live, but to live well.
                 </p>
-                <div className="service-button-container">
-                    {/* <div class="btn btn-three"> */}
-                        <button><p id="quote-button-text">Get A Quote</p></button>
-                    {/* </div> */}
+                <div id="service-quote-container" className="quote-button-container">
+                    <button id="service-quote-button" className="quote-button" onClick={() => props.scrollTo(props.quoteReference)}>Get a Quote</button>
                 </div>
         </div>
     );

@@ -35,10 +35,8 @@ const IntroPage = (props) => (
                     kitchen and bathroom remodels, major renovations and home repairs.
                     </p>
                     
-                <div id="quote-button-container">
-                    {/* <div class="btn btn-three"> */}
-                        <button onClick={() => props.scrollTo(props.contactReference)}><p id="quote-button-text">Get A Quote</p></button>
-                    {/* </div> */}
+                <div className="quote-button-container">
+                        <button id="intro-quote-button" className="quote-button" onClick={() => props.scrollTo(props.quoteReference)}>Get a Quote</button>
                 </div>
                 <div id="spacer-div"></div>
             </div>

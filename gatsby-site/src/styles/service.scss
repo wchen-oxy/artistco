@@ -31,6 +31,24 @@ width: auto;
     
 }
 
+#service-quote-container{
+    display: flex;
+    justify-content: center;    
+}
+
+#service-quote-button{
+    background-color: transparent;
+    border: 0.1em solid black;
+    font:grey;
+}
+
+#service-quote-button:hover {
+   
+        background-color: grey;
+        color: white;
+    
+}
+
 // #service-button{
 //     display: flex;
 //     justify-content: center;
@@ -38,7 +56,8 @@ width: auto;
 
 
 
-@media screen and (max-width: 899px) {
+
+@media screen and (max-width: 899px) and (orientation: portrait) {
     #services-main-container {
         height: 100%;
         flex-direction: column;
@@ -49,6 +68,13 @@ width: auto;
 
     #service-text-container{
         padding-top: 5vh;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 899px) and (orientation: landscape) {
+    #service-image-container{
+        height: 40vw;
         width: 100vw;
     }
 }

@@ -50,7 +50,6 @@ const ImageHolder = (props) => {
                         <a className="prev" onClick={() => moveSlides(-1)}>&#10094;</a>
                         <a className="next" onClick={() => moveSlides(1)}>&#10095;</a>
                     </div>
-                    <br></br>
                     <div id="dot-container">
                         {createDotArray()}
                     </div>

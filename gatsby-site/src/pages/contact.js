@@ -29,7 +29,7 @@ const ContactPage = (props) => (
                         <a className="social-media-link" href="https://sites.google.com/view/mschenmath"><img className="social-media-image" src={instagram} /> @Assential-Works</a>
                     </div>
                     <div className="social-media-link-container">
-                        <a className="social-media-link" href="https://sites.google.com/view/mschenmath"><img className="social-media-image" src={facebook} /> @Assential-Works</a>
+                        <a className="social-media-link" href="https://facebook.com/essentialworks.official"><img className="social-media-image" src={facebook} /> @essentialworks.official</a>
                     </div>
                     <div className="social-media-link-container">
                         <a className="social-media-link" href="https://sites.google.com/view/mschenmath"><img className="social-media-image" src={yelp}/> @Assential-Works</a>

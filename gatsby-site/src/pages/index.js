@@ -7,6 +7,8 @@ import ServicePage from "./service";
 import GalleryPage from "./gallery"
 import PhilosophyPage from "./philosophy";
 import ContactPage from "./contact";
+import FormPage from "./form";
+import AboutPage from "./about";
 import lax from "lax.js";
 import "../styles/index.scss";
 
@@ -37,7 +39,6 @@ import {
   kitchenblack3,
   kitchenblack4
 } from "../styles/image-index";
-import AboutPage from "./about";
 
 const heroResidentialImages =
   [
@@ -196,7 +197,7 @@ export default function Home() {
 
   const handleClickOutside = (event) => {
     if (dropDownMenuRef.current.style.display === "block" && !dropDownMenuRef.current.contains(event.target)
-   && !dropDownButtonRef.current.contains(event.target)) {
+      && !dropDownButtonRef.current.contains(event.target)) {
       console.log("Block launched");
       setDropdownOpen(false);
       dropDownMenuRef.current.style.display = "none";
@@ -243,7 +244,7 @@ export default function Home() {
       console.log('toggle');
       dropDownMenuRef.current.style.display = "block";
     }
-    else{
+    else {
       console.log("dropdown block");
       dropDownMenuRef.current.style.display = "none";
     }
@@ -253,12 +254,16 @@ export default function Home() {
     <div id="app-container">
       <header>
         <nav id="web-navigation-bar">
-          <button onClick={() => scrollTo(homeRef)}><h4>Essential Works</h4></button>
+          <button onClick={() => scrollTo(homeRef)}>
+            <div className="logo-container">
+              <h4 className="logo-text" id="thin-logo">Essential</h4><h4 className="logo-text" id="bold-logo">Works</h4>
+            </div>
+          </button>
           <div className="dropdown">
             <button onClick={toggleDropdown} className="dropbtn" ref={dropDownButtonRef}>Services</button>
             <div id="myDropdown" className="dropdown-content" ref={dropDownMenuRef}>
-            <button onClick={() => scrollTo(residentialRef)}>Residential Services</button>
-          <button onClick={() => scrollTo(businessRef)}>Business Services</button>
+              <button onClick={() => scrollTo(residentialRef)}>Residential Services</button>
+              <button onClick={() => scrollTo(businessRef)}>Business Services</button>
             </div>
           </div>
           {/* <button onClick={() => scrollTo(residentialRef)}>Residential Services</button>
@@ -327,9 +332,7 @@ export default function Home() {
         scrollTo={scrollTo}
 
       />
-      <div className="main-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeq0ywW0K1WxkKr3vAv-mhM4xmqBkioCxE1XM1Jjf3xZ129gA/viewform?embedded=true" height="1190" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>      
-        </div>
+      <FormPage />
       <AboutPage
         reference={aboutRef}
       />

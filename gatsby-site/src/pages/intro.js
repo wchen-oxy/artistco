@@ -8,7 +8,9 @@ const IntroPage = (props) => (
     <div id="intro-main-container" ref={props.reference}>
         <div className="intro-main-columns" id="intro-main-desc">
             <div id="intro-title-container" >
-                <h1>Essential Works</h1>
+                <div className="logo-container">
+                    <h1 className="logo-text" id="thin-logo">Essential</h1><h1 className="logo-text" id="bold-logo">Works</h1>
+                </div>
                 <p>Artisan Construction Works</p>
             </div>
         </div>

@@ -16,7 +16,7 @@ const AboutPage = (props) => (
                     <h2>Personalized Construction Backed by Passion</h2>
                 </div>
                 <p>
-                    Esential Works started off with just one person, Christian Flores Moya. Born in Quito, Ecuador and raised in Queens, New York,
+                    Essential Works started off with just one person, Christian Flores Moya. Born in Quito, Ecuador and raised in Queens, New York,
                     Christian discovered his passion for fine artistic craftsmanship during his undergraduate study in the City
                     University of New York. After returning for an MFA in Sculpture and Interdisciplinary Arts,
                     Christian was introduced to construction work by a friend, and was contracted for commerical renovation in the

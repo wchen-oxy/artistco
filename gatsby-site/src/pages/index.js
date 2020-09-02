@@ -2,12 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { slide as Menu } from 'react-burger-menu'
 
 import IntroPage from "./intro";
-import HighlightSection from "./highlight";
+// import HighlightSection from "./highlight";
 import ServicePage from "./service";
 import GalleryPage from "./gallery"
 import PhilosophyPage from "./philosophy";
 import ContactPage from "./contact";
-import FormPage from "./form";
+// import FormPage from "./form";
 import AboutPage from "./about";
 import lax from "lax.js";
 import "../styles/index.scss";
@@ -269,7 +269,7 @@ export default function Home() {
           {/* <button onClick={() => scrollTo(residentialRef)}>Residential Services</button>
           <button onClick={() => scrollTo(businessRef)}>Business Services</button> */}
           <button onClick={() => scrollTo(aboutRef)}>About Us</button>
-          <button onClick={() => scrollTo(aboutRef)}>Get a Quote</button>
+          <a id="quote-url-link" href="https://forms.gle/idoyRoFJoFWhJACy7" target="_blank" ><p>Get a Quote</p></a>
           <button onClick={() => scrollTo(contactRef)}>Contact Us</button>
           <a id="phone-link" href="tel:347-494-1802"><img id="phone-image" src={phoneCall} />(347) 494-1802</a>
 
@@ -288,6 +288,7 @@ export default function Home() {
             <a id="residential" className="menu-item" onClick={() => scrollToMobile(residentialRef)}>Residential</a>
             <a id="business" className="menu-item" onClick={() => scrollToMobile(businessRef)}>Business</a>
             <a id="about" className="menu-item" onClick={() => scrollToMobile(aboutRef)}>About</a>
+            <a id="form-link" className="menu-item" href="https://forms.gle/idoyRoFJoFWhJACy7" target="_blank" >Get a Quote</a>
             <a id="contact" className="menu-item" onClick={() => scrollToMobile(contactRef)}>Contact</a>
             {/* <a onClick={showSettings} className="menu-item--small" href="">Settings</a> */}
           </Menu>
@@ -305,8 +306,8 @@ export default function Home() {
 
       <IntroPage
         reference={homeRef}
-        quoteReference={contactRef}
-        scrollTo={scrollTo}
+        // quoteReference={contactRef}
+        // scrollTo={scrollTo}
       />
       {/* <HighlightSection>
 
@@ -332,7 +333,7 @@ export default function Home() {
         scrollTo={scrollTo}
 
       />
-      <FormPage />
+      {/* <FormPage /> */}
       <AboutPage
         reference={aboutRef}
       />

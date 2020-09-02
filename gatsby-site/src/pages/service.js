@@ -44,7 +44,7 @@ const ServicePage = (props) => {
                 A place not just to live, but to live well.
                 </p>
                 <div id="service-quote-container" className="quote-button-container">
-                    <button id="service-quote-button" className="quote-button" onClick={() => props.scrollTo(props.quoteReference)}>Get a Quote</button>
+                    <a id="service-quote-button"  className="quote-button" href="https://forms.gle/idoyRoFJoFWhJACy7" target="_blank">Get a Quote</a>
                 </div>
         </div>
     );

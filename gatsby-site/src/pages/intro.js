@@ -38,7 +38,7 @@ const IntroPage = (props) => (
                     </p>
                     
                 <div className="quote-button-container">
-                        <button id="intro-quote-button" className="quote-button" onClick={() => props.scrollTo(props.quoteReference)}>Get a Quote</button>
+                        <a id="intro-quote-button" className="quote-button" href="https://forms.gle/idoyRoFJoFWhJACy7" target="_blank">Get a Quote</a>
                 </div>
                 <div id="spacer-div"></div>
             </div>

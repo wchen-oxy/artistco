@@ -32,10 +32,10 @@ const ContactPage = (props) => (
                 <div className="contact-text-section">
                     <h3>Check Out Our Social Media</h3>
                     <div className="social-media-link-container">
-                        <a className="social-media-link" href="https://www.instagram.com/essentialWorks.construction/"><img className="social-media-image" src={instagram} /> @essentialWorks.construction</a>
+                        <a className="social-media-link" href="https://www.instagram.com/essentialWorks.construction/"><img className="social-media-image" src={instagram} /> @essentialworks.construction</a>
                     </div>
                     <div className="social-media-link-container">
-                        <a className="social-media-link" href="https://facebook.com/essentialworks.construction"><img className="social-media-image" src={facebook} />@essentialworks.official</a>
+                        <a className="social-media-link" href="https://facebook.com/essentialworks.construction"><img className="social-media-image" src={facebook} />@essentialworks.construction</a>
                     </div>
                     <div className="social-media-link-container">
                         <a className="social-media-link" href="https://www.yelp.com/biz/essential-works-manhattan-2"><img className="social-media-image" src={yelp}/>@Essential Works</a>

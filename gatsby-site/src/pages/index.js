@@ -288,7 +288,7 @@ export default function Home() {
             onStateChange={(state) => handleMenuStateChange(state.isOpen)}
           >
             <a id="home" className="menu-item" onClick={() => scrollTo(homeRef, true, true)}>Home</a>
-            <a id="residential" className="menu-item" onClick={() => scrollTo(residentialRef, false, false)}>Residential</a>
+            <a id="residential" className="menu-item" onClick={() => scrollTo(residentialRef, false, true)}>Residential</a>
             <a id="business" className="menu-item" onClick={() => scrollTo(businessRef, false, true)}>Business</a>
             <a id="about" className="menu-item" onClick={() => scrollTo(aboutRef, false, true)}>About</a>
             <a id="form-link" className="menu-item" href="https://forms.gle/idoyRoFJoFWhJACy7" target="_blank" >Get a Quote</a>

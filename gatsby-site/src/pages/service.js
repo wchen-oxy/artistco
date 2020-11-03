@@ -16,8 +16,8 @@ const BUSINESS_HERO_TEXT = (
 const RESIDENTIAL_HERO_TEXT = (
 
     <div
-        // className="side-image lax"
-        // data-lax-opacity="300 0, 500 1"
+    // className="side-image lax"
+    // data-lax-opacity="300 0, 500 1"
     >
         <p>
             We undertand that your home improvement project is an investment in
@@ -31,45 +31,47 @@ const RESIDENTIAL_HERO_TEXT = (
             Our services include:
         </p>
         <br />
-        <p>-Kitchen cabinets</p>
-        <br />
-        <p>-New kitchen</p>
-        <br />
-        <p>-New bathroom</p>
-        <br />
-        <p>-Drywall repair</p>
-        <br />
-        <p>-Drywall installation</p>
-        <br />
-        <p>-Tape and plaster</p>
-        <br />
-        <p>-Wall prep</p>
-        <br />
-        <p>-Paint</p>
-        <br />
-        <p>-Trim and molding</p>
-        <br />
-        <p>-Plumbing installation and repairs</p>
-        <br />
-        <p>-Electrical installation and repairs</p>
-        <br />
-        <p>-Tile and masonry</p>
-        <br />
-        <p>-Carpentry and framing</p>
-        <br />
-        <p>-Basement and attic</p>
-        <br />
-        <p>-Roofing</p>
-        <br />
-        <p>-Flooring</p>
-        <br />
-        <p>-Home Repairs</p>
-        <br />
-        <p>-New cabinet doors</p>
-        <br />
-        <p>-Exterior siding and paint</p>
-        <br />
-        <p>-Demolition and trash removal</p>
+        <ul>
+            <li>Kitchen cabinets</li>
+
+            <li>New kitchen</li>
+
+            <li>New bathroom</li>
+
+            <li>Drywall repair</li>
+
+            <li>Drywall installation</li>
+
+            <li>Tape and plaster</li>
+
+            <li>Wall prep</li>
+
+            <li>Paint</li>
+
+            <li>Trim and molding</li>
+
+            <li>Plumbing installation and repairs</li>
+
+            <li>Electrical installation and repairs</li>
+
+            <li>Tile and masonry</li>
+
+            <li>Carpentry and framing</li>
+
+            <li>Basement and attic</li>
+
+            <li>Roofing</li>
+
+            <li>Flooring</li>
+
+            <li>Home Repairs</li>
+
+            <li>New cabinet doors</li>
+
+            <li>Exterior siding and paint</li>
+
+            <li>Demolition and trash removal</li>
+        </ul>
     </div>
 );
 

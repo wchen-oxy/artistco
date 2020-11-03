@@ -22,23 +22,17 @@ const AboutPage = (props) => (
                 </p>
                 <br />
                 <br />
-                <p>-Home remodeling </p>
-                <br />
-                <p>-Full building remodeling </p>
-                <br />
-                <p>-New bathroom</p>
-                <br />
-                <p>-New kitchen </p>
-                <br />
-                <p>-Complete renovations </p>
-                <br />
-                <p>-Home repairs</p>
-                <br />
-                <p>-Home and building maintenance </p>
-                <br />
-                <p>-Commercial construction</p>
-                <br />
-                <br />
+                <ul>
+                    <li>Home remodeling </li>
+                    <li>Full building remodeling </li>
+                    <li>New bathroom</li>
+                    <li>New kitchen </li>
+                    <li>Complete renovations</li>
+                    <li>Home repairs</li>
+                    <li>Home and building maintenance </li>
+                    <li>Commercial construction</li>
+                    <br />
+                </ul>
                 <p>
                     Our priority is costumer satisfaction and safety. We have put in place
                     all recommended precautions to prevent the spread of Covid-19,
@@ -49,9 +43,9 @@ const AboutPage = (props) => (
                 <p>
                     We work with clients to best meet their needs and budgets. Book a contactless
                     in-person or phone consultation today to go over the details of your project.
-                </p>    
+                </p>
+            </div>
         </div>
-    </div>
 
     </div >
 )

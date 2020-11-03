@@ -335,7 +335,6 @@ export default function Home() {
         orientation="image-right"
         dataArray={heroResidentialImages}
         scrollTo={scrollTo}
-
       />
       {/* <FormPage /> */}
       <AboutPage

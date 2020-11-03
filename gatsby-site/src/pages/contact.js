@@ -35,10 +35,10 @@ const ContactPage = (props) => (
                         <a className="social-media-link" href="https://www.instagram.com/essentialWorks.construction/"><img className="social-media-image" src={instagram} /> @essentialWorks.construction</a>
                     </div>
                     <div className="social-media-link-container">
-                        <a className="social-media-link" href="https://facebook.com/essentialworks.official"><img className="social-media-image" src={facebook} />@essentialworks.official</a>
+                        <a className="social-media-link" href="https://facebook.com/essentialworks.construction"><img className="social-media-image" src={facebook} />@essentialworks.official</a>
                     </div>
                     <div className="social-media-link-container">
-                        <a className="social-media-link" href="https://www.yelp.com/biz/essential-works-manhattan-2"><img className="social-media-image" src={yelp}/> @Essential-Works</a>
+                        <a className="social-media-link" href="https://www.yelp.com/biz/essential-works-manhattan-2"><img className="social-media-image" src={yelp}/>@Essential Works</a>
                     </div>
                 </div>
 

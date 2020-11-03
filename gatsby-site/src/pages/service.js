@@ -100,7 +100,7 @@ const ServicePage = (props) => {
                     id="residential-image-holder"
                     style={
                         !isSmallScreen ? {
-                            transform: `translateY(${(offset * 0.32) - 380}px)`,
+                            transform: `translateY(${(offset * 0.32) - 300}px)`,
                         } : { marginBottom: `20px` }}
                 >
                     <ImageHolder
@@ -127,11 +127,6 @@ const ServicePage = (props) => {
             <div id="service-title-container">
                 <h2>{props.client}</h2>
             </div>
-            {/* <p>
-                Choose a space as uplifting as your new life chapter.
-                A place to clear your mind, to connect, to engage.
-                A place not just to live, but to live well.
-                </p> */}
             {props.client === "Residential" ? RESIDENTIAL_HERO_TEXT : BUSINESS_HERO_TEXT}
             <div id="service-quote-container" className="quote-button-container">
                 <a id="service-quote-button" className="quote-button" href="https://forms.gle/idoyRoFJoFWhJACy7" target="_blank">Get a Quote</a>
@@ -140,7 +135,7 @@ const ServicePage = (props) => {
     );
 
     return (
-        <div id="services-main-container" className="main-container" ref={props.reference}>
+        <div id={!isSmallScreen && props.client === "Residential" ? "residential-container" : "business-container" } className="main-container services-main-container" ref={props.reference}>
             {isSmallScreen && props.client !== "Residential" ?
                 <>
                     {props.orientation === "image-left" ? descriptionContainer : imageContainer}

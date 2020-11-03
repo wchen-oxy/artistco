@@ -43,15 +43,15 @@ import {
 const heroResidentialImages =
   [
     {
-      caption: "Check out Our kitchen lmao",
+      caption: "",
       url: kitchen
     },
     {
-      caption: "This some nice paint",
+      caption: "",
       url: bathroom
     },
     {
-      caption: "whoa this a nice room",
+      caption: "",
       url: wall
     }
   ];
@@ -220,16 +220,19 @@ export default function Home() {
     window.requestAnimationFrame(updateLax)
   }, []);
 
-  const scrollTo = (reference) => {
-    let blockPos = "start"
-    if (reference === aboutRef || reference === contactRef) blockPos = "center";
-    reference.current.scrollIntoView({ behavior: 'smooth', block: blockPos })
-  };
+  // const scrollTo = (reference) => {
+  //   let blockPos = "start"
+  //   if (reference === aboutRef || reference === contactRef) blockPos = "center";
+  //   reference.current.scrollIntoView({ behavior: 'smooth', block: blockPos })
+  // };
 
-  const scrollToMobile = (reference) => {
-    closeMenu();
-    let blockPos = "center"
-    if (reference === homeRef) blockPos = "start";
+  const scrollTo= (reference, fromStartFlag, isMobile) => {
+    let blockPos = "center";
+    if (isMobile) closeMenu();
+    if (fromStartFlag) blockPos = "start";
+    // if (reference === homeRef) blockPos = "start";
+    // else if(reference === contactRef && ) blockPos = "start"
+    console.log(blockPos);
     reference.current.scrollIntoView({ behavior: 'smooth', block: blockPos })
   }
 
@@ -254,7 +257,7 @@ export default function Home() {
     <div id="app-container">
       <header>
         <nav id="web-navigation-bar">
-          <button onClick={() => scrollTo(homeRef)}>
+          <button onClick={() => scrollTo(homeRef, true)}>
             <div className="logo-container">
               <h4 className="logo-text" id="thin-logo">Essential</h4><h4 className="logo-text" id="bold-logo">Works</h4>
             </div>
@@ -262,15 +265,15 @@ export default function Home() {
           <div className="dropdown">
             <button onClick={toggleDropdown} className="dropbtn" ref={dropDownButtonRef}>Services</button>
             <div id="myDropdown" className="dropdown-content" ref={dropDownMenuRef}>
-              <button onClick={() => scrollTo(residentialRef)}>Residential Services</button>
-              <button onClick={() => scrollTo(businessRef)}>Business Services</button>
+              <button onClick={() => scrollTo(residentialRef, true)}>Residential Services</button>
+              <button onClick={() => scrollTo(businessRef, true)}>Business Services</button>
             </div>
           </div>
           {/* <button onClick={() => scrollTo(residentialRef)}>Residential Services</button>
           <button onClick={() => scrollTo(businessRef)}>Business Services</button> */}
-          <button onClick={() => scrollTo(aboutRef)}>About Us</button>
+          <button onClick={() => scrollTo(aboutRef, false)}>About Us</button>
           <a id="quote-url-link" href="https://forms.gle/idoyRoFJoFWhJACy7" target="_blank" ><p>Get a Quote</p></a>
-          <button onClick={() => scrollTo(contactRef)}>Contact Us</button>
+          <button onClick={() => scrollTo(contactRef, false)}>Contact Us</button>
           <a id="phone-link" href="tel:347-494-1802"><img id="phone-image" src={phoneCall} />(347) 494-1802</a>
 
           {/* <div className="phone-item-container" >
@@ -284,12 +287,13 @@ export default function Home() {
             isOpen={menuOpen}
             onStateChange={(state) => handleMenuStateChange(state.isOpen)}
           >
-            <a id="home" className="menu-item" onClick={() => scrollToMobile(homeRef)}>Home</a>
-            <a id="residential" className="menu-item" onClick={() => scrollToMobile(residentialRef)}>Residential</a>
-            <a id="business" className="menu-item" onClick={() => scrollToMobile(businessRef)}>Business</a>
-            <a id="about" className="menu-item" onClick={() => scrollToMobile(aboutRef)}>About</a>
+            <a id="home" className="menu-item" onClick={() => scrollTo(homeRef, true, true)}>Home</a>
+            <a id="residential" className="menu-item" onClick={() => scrollTo(residentialRef, false, false)}>Residential</a>
+            <a id="business" className="menu-item" onClick={() => scrollTo(businessRef, false, true)}>Business</a>
+            <a id="about" className="menu-item" onClick={() => scrollTo(aboutRef, false, true)}>About</a>
             <a id="form-link" className="menu-item" href="https://forms.gle/idoyRoFJoFWhJACy7" target="_blank" >Get a Quote</a>
-            <a id="contact" className="menu-item" onClick={() => scrollToMobile(contactRef)}>Contact</a>
+            <a id="contact" className="menu-item" onClick={() => {console.log("contact hit");
+              return scrollTo(contactRef, false, true);}}>Contact</a>
             {/* <a onClick={showSettings} className="menu-item--small" href="">Settings</a> */}
           </Menu>
           <div className="phone-item-container" >
@@ -312,7 +316,7 @@ export default function Home() {
       {/* <HighlightSection>
 
       </HighlightSection> */}
-      <PhilosophyPage />
+      {/* <PhilosophyPage /> */}
       <ServicePage
         reference={residentialRef}
         quoteReference={aboutRef}

@@ -37,16 +37,15 @@ const GalleryPage = (props) => {
     }
 
     const open = (i) => {
-        setImageHolder( <ImageHolder dataArray={props.dataArray[i].data} />);
-        // setCurrentData(i);
-        // setImageData(props.dataArray[i].data);
+        setImageHolder(
+        <ImageHolder dataArray={props.dataArray[i].data} isModal={true}/>);
         openModal();
     }
 
     const createPreviewPic = (index, thumbnail, caption) => (
         <div key={index} className="thumbnail-container" onClick={() => {
             open(index);
-            }}>
+        }}>
             <img className="thumbnail-image" src={thumbnail}></img>
             <div className="caption-overlay">
                 <div className="caption-text-container">
@@ -89,39 +88,40 @@ const GalleryPage = (props) => {
 
     return (
         <div key={isClient}>
-            {isClient ?
-                (
-                    <>
-                        <div className="main-container" id="gallery-container">
-                            <h2 id="gallery-title-text">Our Residential Work</h2>
-                            <div id="gallery-column-container">
-                                <div className="gallery-column">
-                                    {colArray1}
+            {
+                isClient ?
+                    (
+                        <>
+                            <div className="main-container" id="gallery-container">
+                                <h2 id="gallery-title-text">Our Residential Work</h2>
+                                <div id="gallery-column-container">
+                                    <div className="gallery-column">
+                                        {colArray1}
+                                    </div>
+                                    <div className="gallery-column">
+                                        {colArray2}
+                                    </div>
+                                    <div className="gallery-column">
+                                        {colArray3}
+                                    </div>
                                 </div>
-                                <div className="gallery-column">
-                                    {colArray2}
-                                </div>
-                                <div className="gallery-column">
-                                    {colArray3}
+
+                            </div>
+
+                            <div className="modal" ref={modalRef}>
+                                <div className="overlay"></div>
+                                <span className="close" onClick={close}><h3>X</h3></span>
+                                <div id="gallery-page-modal-image-container" >
+                                    {/* <ImageHolder dataArray={imageData} /> */}
+                                    {imageHolder}
+                                    {/* {currentData} */}
                                 </div>
                             </div>
 
-                        </div>
-
-                        <div className="modal" ref={modalRef}>
-                            <div className="overlay"></div>
-                            <span className="close" onClick={close}><h3>X</h3></span>
-                            <div id="image-holder-container" >
-                            {/* <ImageHolder dataArray={imageData} /> */}
-                            {imageHolder}
-                                {/* {currentData} */}
-                            </div>
-                        </div>
-
-                    </>
-                )
-                : <div className="main-container">
-                </div>
+                        </>
+                    )
+                    :
+                    <div className="main-container"> </div>
             }
         </div>
     )

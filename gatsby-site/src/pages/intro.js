@@ -32,9 +32,8 @@ const IntroPage = (props) => (
             >
                 <h4 className="image-caption-text">Affordable, Durable and Timely Construction</h4>
                 <p className="image-caption-text">
-                    We bring old-world, quality craftsmanship to every unique project we take on.
-                    We specialize in a variety of major home improvement projects which includes additions,
-                    kitchen and bathroom remodels, major renovations and home repairs.
+                NYC based construction company specializing in remodeling, commercial and residential projects.
+                 Let us help you bring your project to life. Set up a consultation today!
                     </p>
                     
                 <div className="quote-button-container">

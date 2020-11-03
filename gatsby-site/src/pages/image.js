@@ -42,7 +42,7 @@ const ImageHolder = (props) => {
         <div id="image-main-container" key={isClient}>
             {isClient && props.dataArray ? (
                 <>
-                    <div className="slideshow-container">
+                    <div className={props.isModal ?  "modal-slideshow-container" : "regular-slideshow-container"  }>
                         <div className="mySlides fade">
                             <img id="image" src={imageSource} />
                             <div className="text" style={imageCaption.length !== 0 ? { backgroundColor: "rgba(44, 44, 44, 0.5)" } : { backgroundColor: "transparent" }}><p>{imageCaption}</p></div>

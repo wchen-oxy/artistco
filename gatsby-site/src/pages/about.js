@@ -7,7 +7,7 @@ const AboutPage = (props) => (
     <div className="main-container" id="about-main-container"   >
         <div className="about-column-container" >
             <div id="about-image-container" >
-                <img id="about-image" src={profile} ref={props.reference}/>
+                <img id="about-image" src={profile} ref={props.reference} />
             </div>
         </div>
         <div className="about-column-container">
@@ -16,29 +16,44 @@ const AboutPage = (props) => (
                     <h2>Personalized Construction Backed by Passion</h2>
                 </div>
                 <p>
-                    Essential Works started off with just one person, Christian Flores Moya. Born in Quito, Ecuador and raised in Queens, New York,
-                    Christian discovered his passion for fine artistic craftsmanship during his undergraduate study in the City
-                    University of New York. After returning for an MFA in Sculpture and Interdisciplinary Arts,
-                    Christian was introduced to construction work by a friend, and was contracted for commerical renovation in the
-                    heart of Manhattan.
-            </p>
+                    We are a full service construction company serving New York City
+                    and the surrounding areas. With various specialties in general
+                    construction and home improvement projects including:
+                </p>
                 <br />
-                <p>After several of these contracts, it became clear to Christian that the work being done did not match the sky high
-                prices that were being charged. As it turned out, the same kinds of prices were being charged for residential
-                construction as well.
-            </p>
                 <br />
-                <p>With that discovery, Christin sought to bring back honesty, fairness and artisan craftsmanship to construction by
-                starting his own construction group, Essential Works LLC. Now that Essential Works has completed several whole-building
-                renovations, Christian is confident that he too can help you with your renovations and put the artistry in your home--without
-                the Manhattan prices of course.
-
-            </p>
-
-            </div>
+                <p>-Home remodeling </p>
+                <br />
+                <p>-Full building remodeling </p>
+                <br />
+                <p>-New bathroom</p>
+                <br />
+                <p>-New kitchen </p>
+                <br />
+                <p>-Complete renovations </p>
+                <br />
+                <p>-Home repairs</p>
+                <br />
+                <p>-Home and building maintenance </p>
+                <br />
+                <p>-Commercial construction</p>
+                <br />
+                <br />
+                <p>
+                    Our priority is costumer satisfaction and safety. We have put in place
+                    all recommended precautions to prevent the spread of Covid-19,
+                    including daily temperature checks and full face mask mandate compliance.
+                </p>
+                <br />
+                <br />
+                <p>
+                    We work with clients to best meet their needs and budgets. Book a contactless
+                    in-person or phone consultation today to go over the details of your project.
+                </p>    
         </div>
-
     </div>
+
+    </div >
 )
 
 export default AboutPage;

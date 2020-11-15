@@ -171,12 +171,28 @@
     //     margin-left: -35vw; /* Negative half of width. */
     // }
 }
-@media screen and (min-width: 899px) {
+
+@media screen and (max-width:  899px) and (min-width: 1000px) {
+
+    #gallery-container{
+        padding-top: 15vw;
+    }
+}
+@media screen and (min-width: 1500px) {
+
+    #gallery-container{
+        padding-top: 20vw;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
 
     .thumbnail-container:hover .caption-overlay {
         opacity: 1;
         transform: scale(1.5);
     }
+
 }
 @media screen and (max-width: 899px) and (orientation: portrait) {
     .close {

@@ -34,7 +34,7 @@ const AboutPage = (props) => (
                     <br />
                 </ul>
                 <p>
-                    Our priority is costumer satisfaction and safety. We have put in place
+                    Our priority is customer satisfaction and safety. We have put in place
                     all recommended precautions to prevent the spread of Covid-19,
                     including daily temperature checks and full face mask mandate compliance.
                 </p>

@@ -6,6 +6,7 @@ import GalleryPage from "./gallery"
 import ContactPage from "./contact";
 import AboutPage from "./about";
 import lax from "lax.js";
+import SEO from "./seo";
 import "../styles/index.scss";
 
 import {
@@ -234,8 +235,10 @@ export default function Home() {
     setDropdownOpen(!dropdownOpen);
   }
   return (
-    <div id="app-container">
-      <main>
+    <main>
+      <SEO />
+      <div id="app-container">
+
         <header>
           <nav id="web-navigation-bar">
             <button onClick={() => scrollTo(homeRef, true)}>
@@ -307,7 +310,8 @@ export default function Home() {
         <div className="main-container" id="footer-container">
           <footer><p>Essential Works, LLC &copy;</p></footer>
         </div>
-      </main>
-    </div>
+
+      </div>
+    </main>
   )
 }

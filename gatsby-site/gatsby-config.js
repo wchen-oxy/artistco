@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   plugins: [
     'gatsby-plugin-sass',
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
   ],
   // pathPrefix: `/artistco/gatsby-site`,
   siteMetadata: {
@@ -17,6 +17,6 @@ module.exports = {
     description:
       "Affordable, Durable and Timely Construction.",
     url: "https://essentialworksconstruction.com", // No trailing slash allowed!
-    image: "/icons/temp-icon.png", // Path to your image you placed in the 'static' folder
+    image: "/images/temp_icon.png", // Path to your image you placed in the 'static' folder
   },
 }

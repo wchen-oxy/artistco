@@ -5,15 +5,12 @@ import '../styles/gallery.scss';
 
 
 const GalleryPage = (props) => {
-    const [currentData, setCurrentData] = useState(0);
     const [isClient, setClient] = useState(false);
     const [colArray1, setColArray1] = useState([]);
     const [colArray2, setColArray2] = useState([]);
     const [colArray3, setColArray3] = useState([]);
-    // const [imageData, setImageData] = useState(null);
     const [imageHolder, setImageHolder] = useState(null);
 
-    // const [imageHolder, setImageHolder] = useState(<></>)
     const modalRef = useRef(null);
     useEffect(() => {
         setClient(true);
@@ -38,7 +35,7 @@ const GalleryPage = (props) => {
 
     const open = (i) => {
         setImageHolder(
-        <ImageHolder dataArray={props.dataArray[i].data} isModal={true}/>);
+            <ImageHolder dataArray={props.dataArray[i].data} isModal={true} />);
         openModal();
     }
 
@@ -105,16 +102,13 @@ const GalleryPage = (props) => {
                                         {colArray3}
                                     </div>
                                 </div>
-
                             </div>
 
                             <div className="modal" ref={modalRef}>
                                 <div className="overlay"></div>
                                 <span className="close" onClick={close}><h3>X</h3></span>
                                 <div id="gallery-page-modal-image-container" >
-                                    {/* <ImageHolder dataArray={imageData} /> */}
                                     {imageHolder}
-                                    {/* {currentData} */}
                                 </div>
                             </div>
 

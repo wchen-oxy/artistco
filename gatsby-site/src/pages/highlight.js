@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/highlight.scss";
 import sideImage1 from "../../static/altered/side-image-1.jpg";
 import sideImage2 from "../../static/altered/side-image-2.jpg";
 import sideImage3 from "../../static/altered/side-image-3.jpg";
@@ -7,6 +6,8 @@ import sideImage4 from "../../static/altered/side-image-4.jpg";
 import sideImage5 from "../../static/altered/side-image-5.jpg";
 import sideImage6 from "../../static/altered/side-image-6.jpg";
 import sideImage7 from "../../static/altered/side-image-7.jpg";
+import "../styles/highlight.scss";
+
 
 const HighlightSection = (props) => (
     <div className="main-container" id="highlight-container">

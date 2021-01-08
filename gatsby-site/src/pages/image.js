@@ -18,7 +18,6 @@ const ImageHolder = (props) => {
         if (index > props.dataArray.length - 1) { index = 0 };
         if (index < 0) { index = props.dataArray.length - 1 };
         setSlideIndex(index);
-        //   showSlides(slideIndex += n)
     };
 
     const currentSlide = (n) => (

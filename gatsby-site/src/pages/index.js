@@ -1,13 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { slide as Menu } from 'react-burger-menu'
-
 import IntroPage from "./intro";
-// import HighlightSection from "./highlight";
 import ServicePage from "./service";
 import GalleryPage from "./gallery"
-import PhilosophyPage from "./philosophy";
 import ContactPage from "./contact";
-// import FormPage from "./form";
 import AboutPage from "./about";
 import lax from "lax.js";
 import "../styles/index.scss";
@@ -220,31 +216,15 @@ export default function Home() {
     window.requestAnimationFrame(updateLax)
   }, []);
 
-  // const scrollTo = (reference) => {
-  //   let blockPos = "start"
-  //   if (reference === aboutRef || reference === contactRef) blockPos = "center";
-  //   reference.current.scrollIntoView({ behavior: 'smooth', block: blockPos })
-  // };
-
-  const scrollTo= (reference, fromStartFlag, isMobile) => {
+  const scrollTo = (reference, fromStartFlag, isMobile) => {
     let blockPos = "center";
     if (isMobile) closeMenu();
     if (fromStartFlag) blockPos = "start";
-    // if (reference === homeRef) blockPos = "start";
-    // else if(reference === contactRef && ) blockPos = "start"
-    console.log(blockPos);
     reference.current.scrollIntoView({ behavior: 'smooth', block: blockPos })
   }
 
-  const showSettings = (event) => {
-    event.preventDefault();
-  }
-
   const toggleDropdown = () => {
-    // const dropdownOpen = dropdownRef.current.style.display;
-    // console.log(dropdownRef.current.style.display);
     if (!dropdownOpen) {
-      console.log('toggle');
       dropDownMenuRef.current.style.display = "block";
     }
     else {
@@ -255,95 +235,79 @@ export default function Home() {
   }
   return (
     <div id="app-container">
-      <header>
-        <nav id="web-navigation-bar">
-          <button onClick={() => scrollTo(homeRef, true)}>
-            <div className="logo-container">
-              <h4 className="logo-text" id="thin-logo">Essential</h4><h4 className="logo-text" id="bold-logo">Works</h4>
+      <main>
+        <header>
+          <nav id="web-navigation-bar">
+            <button onClick={() => scrollTo(homeRef, true)}>
+              <div className="logo-container">
+                <h4 className="logo-text" id="thin-logo">Essential</h4><h4 className="logo-text" id="bold-logo">Works</h4>
+              </div>
+            </button>
+            <div className="dropdown">
+              <button onClick={toggleDropdown} className="dropbtn" ref={dropDownButtonRef}>Services</button>
+              <div id="myDropdown" className="dropdown-content" ref={dropDownMenuRef}>
+                <button onClick={() => scrollTo(residentialRef, true)}>Residential Services</button>
+                <button onClick={() => scrollTo(businessRef, true)}>Business Services</button>
+              </div>
             </div>
-          </button>
-          <div className="dropdown">
-            <button onClick={toggleDropdown} className="dropbtn" ref={dropDownButtonRef}>Services</button>
-            <div id="myDropdown" className="dropdown-content" ref={dropDownMenuRef}>
-              <button onClick={() => scrollTo(residentialRef, true)}>Residential Services</button>
-              <button onClick={() => scrollTo(businessRef, true)}>Business Services</button>
-            </div>
-          </div>
-          {/* <button onClick={() => scrollTo(residentialRef)}>Residential Services</button>
-          <button onClick={() => scrollTo(businessRef)}>Business Services</button> */}
-          <button onClick={() => scrollTo(aboutRef, false)}>About Us</button>
-          <a id="quote-url-link" href="https://forms.gle/idoyRoFJoFWhJACy7" target="_blank" ><p>Get a Quote</p></a>
-          <button onClick={() => scrollTo(contactRef, false)}>Contact Us</button>
-          <a id="phone-link" href="tel:347-494-1802"><img id="phone-image" src={phoneCall} />(347) 494-1802</a>
-
-          {/* <div className="phone-item-container" >
-              <a href="tel:123-456-7890">123-456-7890</a>
-            </div> */}
-
-        </nav>
-        <div id="mobile-navigation-bar">
-          <Menu
-            // outerContainerId={ "mobile-navigation-bar"}
-            isOpen={menuOpen}
-            onStateChange={(state) => handleMenuStateChange(state.isOpen)}
-          >
-            <a id="home" className="menu-item" onClick={() => scrollTo(homeRef, true, true)}>Home</a>
-            <a id="residential" className="menu-item" onClick={() => scrollTo(residentialRef, false, true)}>Residential</a>
-            <a id="business" className="menu-item" onClick={() => scrollTo(businessRef, false, true)}>Business</a>
-            <a id="about" className="menu-item" onClick={() => scrollTo(aboutRef, false, true)}>About</a>
-            <a id="form-link" className="menu-item" href="https://forms.gle/idoyRoFJoFWhJACy7" target="_blank" >Get a Quote</a>
-            <a id="contact" className="menu-item" onClick={() => {console.log("contact hit");
-              return scrollTo(contactRef, false, true);}}>Contact</a>
-            {/* <a onClick={showSettings} className="menu-item--small" href="">Settings</a> */}
-          </Menu>
-          <div className="phone-item-container" >
+            <button onClick={() => scrollTo(aboutRef, false)}>About Us</button>
+            <a id="quote-url-link" href="https://forms.gle/idoyRoFJoFWhJACy7" target="_blank" ><p>Get a Quote</p></a>
+            <button onClick={() => scrollTo(contactRef, false)}>Contact Us</button>
             <a id="phone-link" href="tel:347-494-1802"><img id="phone-image" src={phoneCall} />(347) 494-1802</a>
+          </nav>
+          <div id="mobile-navigation-bar">
+            <Menu
+              isOpen={menuOpen}
+              onStateChange={(state) => handleMenuStateChange(state.isOpen)}
+            >
+              <a id="home" className="menu-item" onClick={() => scrollTo(homeRef, true, true)}>Home</a>
+              <a id="residential" className="menu-item" onClick={() => scrollTo(residentialRef, false, true)}>Residential</a>
+              <a id="business" className="menu-item" onClick={() => scrollTo(businessRef, false, true)}>Business</a>
+              <a id="about" className="menu-item" onClick={() => scrollTo(aboutRef, false, true)}>About</a>
+              <a id="form-link" className="menu-item" href="https://forms.gle/idoyRoFJoFWhJACy7" target="_blank" >Get a Quote</a>
+              <a id="contact" className="menu-item" onClick={() => {
+                console.log("contact hit");
+                return scrollTo(contactRef, false, true);
+              }}>Contact</a>
+
+            </Menu>
+            <div className="phone-item-container" >
+              <a id="phone-link" href="tel:347-494-1802"><img id="phone-image" src={phoneCall} />(347) 494-1802</a>
+            </div>
           </div>
 
-          {/* <div id="mobile-phone" >
-        <img id="phone-image" src={phoneCall} />
-        </div> */}
+        </header>
 
+        <IntroPage
+          reference={homeRef}
+        />
+        <ServicePage
+          reference={residentialRef}
+          quoteReference={aboutRef}
+          client="Residential"
+          orientation="image-left"
+          dataArray={heroResidentialImages}
+          scrollTo={scrollTo}
+        />
+        <GalleryPage
+          dataArray={galleryResidentalImages}
+        />
+        <ServicePage
+          reference={businessRef}
+          quoteReference={aboutRef}
+          client="Business"
+          orientation="image-right"
+          dataArray={heroResidentialImages}
+          scrollTo={scrollTo}
+        />
+        <AboutPage
+          reference={aboutRef}
+        />
+        <ContactPage reference={contactRef} />
+        <div className="main-container" id="footer-container">
+          <footer><p>Essential Works, LLC &copy;</p></footer>
         </div>
-
-      </header>
-
-      <IntroPage
-        reference={homeRef}
-        // quoteReference={contactRef}
-        // scrollTo={scrollTo}
-      />
-      {/* <HighlightSection>
-
-      </HighlightSection> */}
-      {/* <PhilosophyPage /> */}
-      <ServicePage
-        reference={residentialRef}
-        quoteReference={aboutRef}
-        client="Residential"
-        orientation="image-left"
-        dataArray={heroResidentialImages}
-        scrollTo={scrollTo}
-      />
-      <GalleryPage
-        dataArray={galleryResidentalImages}
-      />
-      <ServicePage
-        reference={businessRef}
-        quoteReference={aboutRef}
-        client="Business"
-        orientation="image-right"
-        dataArray={heroResidentialImages}
-        scrollTo={scrollTo}
-      />
-      {/* <FormPage /> */}
-      <AboutPage
-        reference={aboutRef}
-      />
-      <ContactPage reference={contactRef} />
-      <div className="main-container" id="footer-container">
-        <footer><p>Essential Works, LLC &copy;</p></footer>
-      </div>
+      </main>
     </div>
   )
 }

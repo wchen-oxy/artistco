@@ -16,7 +16,7 @@ module.exports = {
     titleTemplate: "%s · NYC",
     description:
       "Affordable, Durable and Timely Construction.",
-    url: "https://essentialworksconstruction.com", // No trailing slash allowed!
+    url: "https://www.essentialworksconstruction.com", // No trailing slash allowed!
     image: "/images/temp_icon.png", // Path to your image you placed in the 'static' folder
   },
 }

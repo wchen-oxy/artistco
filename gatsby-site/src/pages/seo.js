@@ -35,7 +35,7 @@ const SEO = ({ title, description, image, article }) => {
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
-      {seo.image && <meta property="og:image" content={temp_icon} />}
+      {seo.image && <meta property="og:image" content={seo.image} />}
     </Helmet>
   )
 }

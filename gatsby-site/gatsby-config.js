@@ -17,6 +17,6 @@ module.exports = {
     description:
       "Affordable, Durable and Timely Construction.",
     url: "https://www.essentialworksconstruction.com", // No trailing slash allowed!
-    image: "/images/temp_icon.png", // Path to your image you placed in the 'static' folder
+    image: "https://www.rsd-agencements.com/Images/Accueil/RSD-Agencements-Architecte-interieur-Lyon-5.jpg", // Path to your image you placed in the 'static' folder
   },
 }

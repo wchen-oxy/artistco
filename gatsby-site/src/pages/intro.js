@@ -22,7 +22,7 @@ const IntroPage = (props) => (
         <div className="intro-main-columns" id="intro-main-image-container">
             <img
                 id="intro-image"
-                alt="nice building image"
+                alt="Essential Works Header Image"
                 className="lax"
                 src="https://www.rsd-agencements.com/Images/Accueil/RSD-Agencements-Architecte-interieur-Lyon-5.jpg" />
 
